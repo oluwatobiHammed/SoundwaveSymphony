@@ -156,3 +156,23 @@ footer p {
 .about-content p {
     margin-bottom: 15px; /* Add margin bottom */
 }
+
+/* Music Section */
+.music-section {
+    background-color: #f0f0f0; /* Light background color */
+    padding: 50px 0; /* Add padding */
+}
+
+.music-heading {
+    font-size: 36px; /* Larger font size */
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.music-content {
+    font-size: 16px; /* Font size */
+    line-height: 1.6; /* Line height */
+}
+
+.music-content p {
+    margin-bottom: 15px; /* Add margin bottom */
+}
