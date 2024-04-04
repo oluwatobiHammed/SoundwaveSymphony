@@ -261,3 +261,60 @@ footer p {
 .booking-form input[type="submit"]:hover {
     background-color: #555; /* Darker background color on hover */
 }
+
+
+/* Merchandise Section */
+
+.merchandise-section {
+    background-color: #fcf8e3; /* Light yellow background color */
+    padding: 50px 0; /* Add padding */
+}
+
+.merchandise-heading {
+    font-size: 36px; /* Larger font size */
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.merchandise-content {
+    font-size: 16px; /* Font size */
+    line-height: 1.6; /* Line height */
+}
+
+.merchandise-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.merch-item {
+    flex-basis: calc(50% - 20px); /* Adjust item width */
+    margin-bottom: 30px; /* Add margin bottom */
+}
+
+.merch-item img {
+    width: 100%;
+    border-radius: 5px; /* Add border radius */
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+.merch-item h3 {
+    font-size: 24px; /* Adjust font size */
+    margin-bottom: 5px; /* Add margin bottom */
+}
+
+.merch-item p {
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+.merch-item button {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    border: none;
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer;
+}
+
+.merch-item button:hover {
+    background-color: #555; /* Darker background color on hover */
+}
