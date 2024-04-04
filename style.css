@@ -11,7 +11,7 @@ body {
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 20px;
 }
 
 header {
@@ -81,11 +81,6 @@ footer p {
     padding: 10px 0; /* Reduced padding */
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px; /* Add padding to the sides */
-}
 
 .header-title {
     font-size: 24px; /* Reduced font size */
@@ -273,28 +268,38 @@ footer p {
 .merchandise-heading {
     font-size: 36px; /* Larger font size */
     margin-bottom: 20px; /* Add margin bottom */
+    text-align: center; /* Center the heading */
 }
 
 .merchandise-content {
     font-size: 16px; /* Font size */
     line-height: 1.6; /* Line height */
+    text-align: center; /* Center the content */
 }
 
 .merchandise-items {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 20px; /* Add space between items */
 }
 
 .merch-item {
     flex-basis: calc(50% - 20px); /* Adjust item width */
     margin-bottom: 30px; /* Add margin bottom */
+    width: 300px; /* Set a fixed width for items */
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
 }
 
 .merch-item img {
-    width: 100%;
+    max-width: 100%; /* Make images responsive */
     border-radius: 5px; /* Add border radius */
     margin-bottom: 10px; /* Add margin bottom */
+    height: auto;
+    border-radius: 5px;
 }
 
 .merch-item h3 {
@@ -318,6 +323,8 @@ footer p {
 .merch-item button:hover {
     background-color: #555; /* Darker background color on hover */
 }
+
+
 
 /* Footer */
 .contact-footer {
@@ -386,3 +393,15 @@ footer p {
 
 
 
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+    .merch-item {
+        width: calc(50% - 20px); /* Set width to 50% minus margin */
+    }
+}
+
+@media (max-width: 576px) {
+    .merch-item {
+        width: calc(100% - 20px); /* Set width to 100% minus margin */
+    }
+}
