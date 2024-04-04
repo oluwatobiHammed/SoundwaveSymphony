@@ -176,3 +176,35 @@ footer p {
 .music-content p {
     margin-bottom: 15px; /* Add margin bottom */
 }
+
+/* Shows Section */
+
+.shows-section {
+    background-color: #e5e5e5; /* Light background color */
+    padding: 50px 0; /* Add padding */
+}
+
+.shows-heading {
+    font-size: 36px; /* Larger font size */
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.upcoming-shows-heading {
+    font-size: 24px; /* Larger font size for upcoming shows heading */
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+.upcoming-shows-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.upcoming-shows-list li {
+    margin-bottom: 10px; /* Add margin bottom for each list item */
+}
+
+.shows-content {
+    font-size: 16px; /* Font size */
+    line-height: 1.6; /* Line height */
+}
