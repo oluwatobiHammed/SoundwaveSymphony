@@ -318,3 +318,71 @@ footer p {
 .merch-item button:hover {
     background-color: #555; /* Darker background color on hover */
 }
+
+/* Footer */
+.contact-footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    padding: 50px 0; /* Add padding */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px; /* Add padding to the sides */
+}
+
+.contact-info {
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.social-media {
+    list-style-type: none;
+    padding: 20px 0 0; /* Add top padding */
+    margin: 0;
+}
+
+.social-media li {
+    display: inline;
+    margin-right: 10px; /* Add margin right */
+}
+
+.social-media li:last-child {
+    margin-right: 0; /* Remove margin right for the last item */
+}
+
+.social-media li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px; /* Font size */
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Add border radius */
+    background-color: #555; /* Button background color */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+
+
+.social-media .social-link {
+    display: inline-block;
+    width: 40px; /* Adjust the width of the icon container */
+    height: 40px; /* Adjust the height of the icon container */
+    background-color: #333; /* Background color of the icon container */
+    border-radius: 50%; /* Make the container round */
+    text-align: center;
+    line-height: 40px; /* Center the icon vertically */
+    margin-right: 10px; /* Add margin between icons */
+}
+
+.social-media .social-link i {
+    color: #fff; /* Color of the icon */
+    font-size: 20px; /* Adjust the size of the icon */
+    transition: color 0.3s ease; /* Smooth transition */
+}
+
+.social-media .social-link:hover i {
+    color: #777; /* Darker color on hover */
+}
+
+
+
