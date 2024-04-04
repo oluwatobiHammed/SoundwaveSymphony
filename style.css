@@ -74,7 +74,7 @@ footer p {
     text-decoration: none;
 }
 
-
+/* header */
 .header {
     background-color: #333; /* Dark background color */
     color: #fff; /* Light text color */
@@ -136,3 +136,23 @@ footer p {
     background-color: #777; /* Change background color on hover */
 }
 
+
+/* About Section */
+.about-section {
+    background-color: #f8f8f8; /* Light background color */
+    padding: 50px 0; /* Add padding */
+}
+
+.about-heading {
+    font-size: 36px; /* Larger font size */
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.about-content {
+    font-size: 16px; /* Font size */
+    line-height: 1.6; /* Line height */
+}
+
+.about-content p {
+    margin-bottom: 15px; /* Add margin bottom */
+}
