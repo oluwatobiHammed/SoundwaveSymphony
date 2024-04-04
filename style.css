@@ -214,22 +214,35 @@ footer p {
 .booking-heading {
     font-size: 36px; /* Larger font size */
     margin-bottom: 20px; /* Add margin bottom */
+    text-align: center; /* Center the heading */
 }
 
 .booking-content {
     font-size: 16px; /* Font size */
     line-height: 1.6; /* Line height */
+    text-align: center; /* Center the content */
 }
 
 .booking-form {
     border: 2px solid #333; /* Add border */
     border-radius: 5px; /* Add border radius */
     padding: 20px; /* Add padding */
+    max-width: 500px; /* Set maximum width for the form */
+    margin: 0 auto; /* Center the form */
 }
 
 .booking-form label {
     display: block; /* Display labels as block elements */
     margin-bottom: 10px; /* Add margin bottom */
+}
+
+.booking-form label,
+.booking-form input,
+.booking-form textarea,
+.booking-form input[type="submit"] {
+    display: block; /* Display elements as blocks */
+    width: 100%; /* Full width */
+    margin-bottom: 4px; /* Add margin at the bottom */
 }
 
 .booking-form input[type="text"],
@@ -255,6 +268,13 @@ footer p {
 
 .booking-form input[type="submit"]:hover {
     background-color: #555; /* Darker background color on hover */
+}
+
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+    .booking-form {
+        max-width: 80%; /* Reduce maximum width for smaller screens */
+    }
 }
 
 
