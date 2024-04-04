@@ -182,11 +182,13 @@ footer p {
 .shows-heading {
     font-size: 36px; /* Larger font size */
     margin-bottom: 20px; /* Add margin bottom */
+    text-align: center; /* Center the heading */
 }
 
 .upcoming-shows-heading {
     font-size: 24px; /* Larger font size for upcoming shows heading */
     margin-bottom: 10px; /* Add margin bottom */
+    margin-top: 20px; /* Add margin at the top */
 }
 
 .upcoming-shows-list {
@@ -202,8 +204,15 @@ footer p {
 .shows-content {
     font-size: 16px; /* Font size */
     line-height: 1.6; /* Line height */
+    text-align: center; /* Center the content */
 }
 
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 10px; /* Reduce padding for smaller screens */
+    }
+}
 
 /* Booking Section */
 .booking-section {
