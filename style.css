@@ -324,13 +324,25 @@ footer p {
     background-color: #555; /* Darker background color on hover */
 }
 
+/* Adjust styles for smaller screens */
+@media (max-width: 768px) {
+    .merch-item {
+        width: calc(50% - 20px); /* Set width to 50% minus margin */
+    }
+}
+
+@media (max-width: 576px) {
+    .merch-item {
+        width: calc(100% - 20px); /* Set width to 100% minus margin */
+    }
+}
 
 
 /* Footer */
 .contact-footer {
     background-color: #333; /* Dark background color */
     color: #fff; /* Light text color */
-    padding: 50px 0; /* Add padding */
+    padding: 20px 0; /* Add padding */
 }
 
 .container {
@@ -340,18 +352,20 @@ footer p {
 }
 
 .contact-info {
+    text-align: center; /* Center the contact info */
     margin-bottom: 20px; /* Add margin bottom */
 }
 
 .social-media {
     list-style-type: none;
-    padding: 20px 0 0; /* Add top padding */
+    padding: 0;
     margin: 0;
+    text-align: center; /* Center the social media icons */
 }
 
 .social-media li {
-    display: inline;
-    margin-right: 10px; /* Add margin right */
+    display: inline-block; /* Display icons inline */
+    margin: 0 10px; /* Add margin between icons */
 }
 
 .social-media li:last-child {
@@ -361,7 +375,7 @@ footer p {
 .social-media li a {
     color: #fff;
     text-decoration: none;
-    font-size: 18px; /* Font size */
+    font-size: 20px; /* Font size */
     padding: 10px 20px; /* Add padding */
     border-radius: 5px; /* Add border radius */
     background-color: #555; /* Button background color */
@@ -387,21 +401,25 @@ footer p {
     transition: color 0.3s ease; /* Smooth transition */
 }
 
+.social-media li a:hover {
+    color: #ccc; /* Change color on hover */
+}
+
 .social-media .social-link:hover i {
     color: #777; /* Darker color on hover */
 }
 
-
-
 /* Adjust styles for smaller screens */
 @media (max-width: 768px) {
-    .merch-item {
-        width: calc(50% - 20px); /* Set width to 50% minus margin */
+    .social-media li {
+        margin: 0 5px; /* Reduce margin between icons */
     }
 }
 
 @media (max-width: 576px) {
-    .merch-item {
-        width: calc(100% - 20px); /* Set width to 100% minus margin */
+    .contact-info {
+        font-size: 14px; /* Reduce font size for smaller screens */
     }
 }
+
+
