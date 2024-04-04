@@ -208,3 +208,56 @@ footer p {
     font-size: 16px; /* Font size */
     line-height: 1.6; /* Line height */
 }
+
+
+/* Booking Section */
+.booking-section {
+    background-color: #f9f9f9; /* Light background color */
+    padding: 50px 0; /* Add padding */
+}
+
+.booking-heading {
+    font-size: 36px; /* Larger font size */
+    margin-bottom: 20px; /* Add margin bottom */
+}
+
+.booking-content {
+    font-size: 16px; /* Font size */
+    line-height: 1.6; /* Line height */
+}
+
+.booking-form {
+    border: 2px solid #333; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    padding: 20px; /* Add padding */
+}
+
+.booking-form label {
+    display: block; /* Display labels as block elements */
+    margin-bottom: 10px; /* Add margin bottom */
+}
+
+.booking-form input[type="text"],
+.booking-form input[type="email"],
+.booking-form input[type="date"],
+.booking-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px; /* Add margin bottom */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+.booking-form input[type="submit"] {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* Light text color */
+    border: none;
+    padding: 10px 20px; /* Add padding */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer;
+}
+
+.booking-form input[type="submit"]:hover {
+    background-color: #555; /* Darker background color on hover */
+}
