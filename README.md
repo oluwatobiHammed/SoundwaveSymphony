@@ -43,5 +43,3 @@ The Contact section provides contact information for users to reach out to Sound
 ## Contributing
 Contributions to improve the website or fix any issues are welcome. Please submit a pull request with your proposed changes.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
