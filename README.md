@@ -11,20 +11,35 @@ This repository contains the code for the Soundwave Symphony website, a dynamic 
 - [Merchandise](#merchandise)
 - [Contact](#contact)
 
+  <img width="976" alt="Screenshot 2024-04-05 at 17 25 27" src="https://github.com/oluwatobiHammed/SoundwaveSymphony/assets/50711478/4c043fa2-d1d0-4806-979d-088ce0939e65">
+
+
 ## About
-The About section provides an overview of Soundwave Symphony, including their formation, musical style, performances, and community involvement.
+The About section provides an overview of the Soundwave Symphony, including its formation, musical style, performances, and community involvement.
+
+<img width="1680" alt="Screenshot 2024-04-05 at 17 28 12" src="https://github.com/oluwatobiHammed/SoundwaveSymphony/assets/50711478/a2c8ba33-fc1d-4a85-92fa-2c6af47c3362">
+
 
 ## Music
 The Music section showcases the diverse collection of tracks by Soundwave Symphony, spanning various genres and emotions. It provides information on where to stream their music and stay updated on upcoming releases.
 
+<img width="1680" alt="Screenshot 2024-04-05 at 17 31 31" src="https://github.com/oluwatobiHammed/SoundwaveSymphony/assets/50711478/915fd559-7203-45ec-a8bc-946c1987f5f0">
+
 ## Shows
 The Shows section displays information about upcoming performances by Soundwave Symphony. It includes details such as dates, venues, locations, and ticket links. Additionally, it encourages users to sign up for newsletters and follow social media for updates on tour dates.
+
+<img width="1680" alt="Screenshot 2024-04-05 at 17 33 10" src="https://github.com/oluwatobiHammed/SoundwaveSymphony/assets/50711478/a42a8c1a-8541-4dad-aeed-4cf024f9999a">
+
 
 ## Booking
 The Booking section offers information for individuals or organizations interested in booking Soundwave Symphony for events. It includes a booking inquiry form where users can provide event details and request availability and pricing.
 
+<img width="1680" alt="Screenshot 2024-04-05 at 17 34 04" src="https://github.com/oluwatobiHammed/SoundwaveSymphony/assets/50711478/86fbb626-d271-409d-87fe-12d354f7d019">
+
 ## Merchandise
 The Merchandise section features a selection of stylish merchandise items available for purchase to support Soundwave Symphony. It displays images, descriptions, and prices of merchandise items, along with a button to add items to the cart.
+
+<img width="1680" alt="Screenshot 2024-04-05 at 17 34 53" src="https://github.com/oluwatobiHammed/SoundwaveSymphony/assets/50711478/e45c4e1c-0fac-4c9d-8503-7dec1efe9819">
 
 ## Contact
 The Contact section provides contact information for users to reach out to Soundwave Symphony with questions or feedback. It includes an email address and links to social media profiles for further engagement.
