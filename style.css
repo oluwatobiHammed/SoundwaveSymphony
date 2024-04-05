@@ -127,14 +127,80 @@ footer p {
 }
 
 .about-content {
+    background-image: url('monkeyMusic.jpg'); /* Add the path to your image */
     font-size: 16px; /* Font size */
     line-height: 1.6; /* Line height */
     text-align: center; /* Center the heading */
+    background-size: cover;
+    background-position: center;
+    padding: 20px; /* Adjust padding as needed */
+    border-radius: 10px; /* Add border-radius for curved corners */
 }
 
 .about-content p {
-    margin-bottom: 15px; /* Add margin bottom */
+    margin-bottom: 20px; /* Add margin bottom */
+    color: #ffffff; /* Set text color to ensure readability */
 }
+
+.quarterP {
+    text-align: center; /* Center text within paragraph */
+    color: #ffffff; /* Set text color to ensure readability */
+    text-align: center; /* Center the heading */
+    margin: 0 10px;
+}
+
+#firstpar {
+    margin-top: 65px; /* Add margin bottom */
+}
+
+#lastpar{
+    margin-bottom: 65px; /* Add margin bottom */
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.col {
+    width: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/* Define background colors for each column */
+.quarters-container {
+    margin-top: 0px; /* Add margin bottom */
+    margin-left: 25px; /* Add margin bottom */
+    padding: 20px; /* Add padding for spacing */
+    padding-top: 0;
+
+}
+
+
+.quarters-container .col-sm-6 {
+    padding: 10px; /* Add padding for spacing between quarters */
+}
+
+
+.quarters-container {
+    margin-top: 20px; /* Add margin to separate from the about-content */
+}
+
+.quarter {
+    height: 100px; /* Set height for each quarter */
+    width: 80%; /* Set width for each quarter */
+    margin-bottom: 10px; /* Add margin to separate quarters */
+    margin-left: 20px; /* Add margin to separate quarters */
+    border-radius: 10px; /* Add border-radius for curved corners */
+    justify-content: center;
+    align-items: center;
+    background-color: #8b2323; /* Default background color */
+    display: flex;
+}
+
+
 
 /* Music Section */
 .music-section {
@@ -185,6 +251,7 @@ footer p {
     font-size: 36px; /* Larger font size */
     margin-bottom: 20px; /* Add margin bottom */
     text-align: center; /* Center the heading */
+    color: #403b3b; /* Text color */
 }
 
 .upcoming-shows-heading {
@@ -209,6 +276,12 @@ footer p {
     text-align: center; /* Center the content */
     background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background color to improve readability */
     padding: 20px; /* Add padding to the content */
+}
+
+.ticket-link {
+    color: rgb(235, 8, 8); /* Change the color to indicate it's not clickable */
+    text-decoration: none; /* Remove underline */
+    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
 }
 
 /* Responsive styling for YouTube video */
