@@ -127,7 +127,7 @@ footer p {
 }
 
 .about-content {
-    background-image: url('monkeyMusic.jpg'); /* Add the path to your image */
+    background-image: url('img/monkeyMusic.jpg'); /* Add the path to your image */
     font-size: 16px; /* Font size */
     line-height: 1.6; /* Line height */
     text-align: center; /* Center the heading */
@@ -205,7 +205,7 @@ footer p {
 /* Music Section */
 .music-section {
 
-    background-image: url('showposter.jpg'); /* Add the path to your image */
+    background-image: url('img/showposter.jpg'); /* Add the path to your image */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the background image */
     color: #fff; /* Text color */
@@ -240,7 +240,7 @@ footer p {
 
 .shows-section {
 
-    background-image: url('stageShowposter.jpg'); /* Add the path to your image */
+    background-image: url('img/stageShowposter.jpg'); /* Add the path to your image */
     background-size: cover; /* Cover the entire section */
     background-position: center; /* Center the background image */
     color: #fff; /* Text color */
