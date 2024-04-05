@@ -117,3 +117,32 @@ body {
 ## Contributing
 Contributions to improve the website or fix any issues are welcome. Please submit a pull request with your proposed changes.
 
+## References
+
+### Images
+
+- **T-shirt Image:**
+  - Source: [Example Source](https://www.redmolotov.com/song-waveform-tshirt)
+  - Description: This image shows the Soundwave Symphony T-shirt available for purchase in the merchandise section.
+
+- **Poster Image:**
+  - Source: [Example Source](https://www.redmolotov.com/song-waveform-tshirt)
+  - Description: This image displays the Soundwave Symphony poster available for purchase in the merchandise section.
+
+  - **MonkeyMusic Image:**
+  - Source: [Example Source](https://pixabay.com/photos/monkey-music-concert-guitar-stage-3507317/)
+  - Description: This image displays the Soundwave Symphony poster on the Aboutus section.
+
+  - **ShowPoster Image:**
+  - Source: [Example Source](https://teemill.com/sell-band-merchandise/?cgi=1&camp=1217&msclkid=636961a4a2621978dcbb07ab68ecbe13)
+  - Description: This image displays the Soundwave Symphony poster in the Show section.
+
+  ### Video
+
+    - **Youtube Video:**
+  - Source: [Example Source]( https://www.google.com/search?q=short+band+concert+show+video&sca_esv=469084b56d0a10d6&sca_upv=1&rlz=1C5CHFA_enNG903NG903&sxsrf=ACQVn099oXSoDhL7xX5V_YDg_ipNnQ4hwg%3A1712315790374&ei=jt0PZp-_FsuphbIPud-RwAg&ved=0ahUKEwifvraz-aqFAxXLVEEAHblvBIgQ4dUDCBA&uact=5&oq=short+band+concert+show+video&gs_lp=Egxnd3Mtd2l6LXNlcnAiHXNob3J0IGJhbmQgY29uY2VydCBzaG93IHZpZGVvMgUQIRifBTIFECEYnwUyBRAhGJ8FSMUiULkHWIIQcAF4AZABAJgBvQGgAaUFqgEDNC4yuAEDyAEA-AEBmAIHoAK3BcICChAAGEcY1gQYsAPCAgcQIxiwAhgnwgIIECEYoAEYwwTCAgoQIRgKGKABGMMEwgIIEAAYgAQYogSYAwCIBgGQBgiSBwM1LjKgB7IU&sclient=gws-wiz-serp#fpstate=ive&vld=cid:fecf91dd,vid:qaaohm2sZSE,st:0)
+  - Description: This video displays the Soundwave Symphony show in the Show section.
+
+ 
+
+<!-- Add more image references as needed -->
