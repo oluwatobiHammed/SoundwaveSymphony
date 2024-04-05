@@ -85,6 +85,24 @@ The Contact section provides contact information for users to reach out to Sound
 </html>
 ```
 
+## CSS Code
+```
+/* Sample CSS styles for demonstration */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Add more CSS styles as needed */
+
+```
 ## Technologies Used
 - HTML
 - CSS
