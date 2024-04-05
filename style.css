@@ -75,76 +75,44 @@ footer p {
 }
 
 /* header */
-.header {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* Light text color */
-    padding: 20px 0; /* Reduced padding */
-}
-
-
-.header-title {
-    font-size: 24px; /* Reduced font size */
-    margin: 0; /* Remove default margin */
-    text-align: center; /* Center the title */
-}
-
+/* Remove existing header navigation styles */
 .header-nav {
-    list-style-type: none;
-    padding: 20px 0; /* Add top and bottom padding */
-    margin: 0;
-    text-align: center; /* Center the navigation */
+    display: none;
 }
 
 .header-nav li {
-    display: inline-block; /* Display navigation items inline */
-    margin-right: 20px; /* Add margin between navigation items */
+    display: block;
+    margin-right: 0;
+    text-align: center;
 }
 
-.header-nav li:last-child {
-    margin-right: 0; /* Remove margin from the last item */
+/* Custom styles for the hamburger menu icon */
+.navbar-toggler {
+    color: #fff; /* Color of the hamburger menu icon */
+    border: none; /* Remove border */
+    padding: 0.25rem 0.75rem; /* Padding for the hamburger menu icon */
+    font-size: 1.25rem; /* Adjust font size */
+    background-color: transparent; /* Transparent background */
 }
 
-.header-nav li a {
-    color: #fff; /* Link color */
-    text-decoration: none; /* Remove underline */
-    font-size: 18px; /* Adjust font size */
-    transition: color 0.3s ease; /* Smooth transition */
+.navbar-toggler:focus {
+    outline: none; /* Remove focus outline */
 }
 
-.header-nav li a:hover {
-    color: #ffd700; /* Change color on hover */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+@media (min-width: 768px) {
+    .navbar-toggler {
+        display: none; /* Hide the hamburger menu icon on larger screens */
+    }
 
-.header-nav li {
-    display: inline;
+    .header-nav {
+        display: block; /* Display the navigation links on larger screens */
+    }
 }
 
-.header-nav li a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 16px;
-    padding: 10px 20px; /* Add padding to create button-like appearance */
-    background-color: #555; /* Add background color */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    transition: background-color 0.3s; /* Add transition effect for hover */
-}
-
-.header-nav li a:hover {
-    background-color: #777; /* Change background color on hover */
-}
-
-.hamburger-menu {
-    display: none; /* Hide hamburger menu by default */
-    cursor: pointer;
-}
-
-.line {
-    width: 30px;
-    height: 3px;
-    background-color: #fff;
-    margin: 5px 0;
-}
 
 /* About Section */
 .about-section {
@@ -463,20 +431,6 @@ footer p {
         font-size: 14px; /* Reduce font size for smaller screens */
     }
 
-    .header-title {
-        font-size: 24px; /* Reduce font size for smaller screens */
-    }
-    
-    .header-nav {
-        display: block; /* Display navigation items as blocks */
-        text-align: center; /* Center the navigation */
-        padding: 20px 0; /* Add top and bottom padding */
-    }
-    
-    .header-nav li {
-        display: block; /* Display navigation items as blocks */
-        margin: 10px 0; /* Add margin between navigation items */
-    }
 }
 
 
