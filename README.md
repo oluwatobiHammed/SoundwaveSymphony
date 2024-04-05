@@ -157,6 +157,16 @@ Contributions to improve the website or fix any issues are welcome. Please submi
     - **Youtube Video:**
   - Source: [Source]( https://www.google.com/search?q=short+band+concert+show+video&sca_esv=469084b56d0a10d6&sca_upv=1&rlz=1C5CHFA_enNG903NG903&sxsrf=ACQVn099oXSoDhL7xX5V_YDg_ipNnQ4hwg%3A1712315790374&ei=jt0PZp-_FsuphbIPud-RwAg&ved=0ahUKEwifvraz-aqFAxXLVEEAHblvBIgQ4dUDCBA&uact=5&oq=short+band+concert+show+video&gs_lp=Egxnd3Mtd2l6LXNlcnAiHXNob3J0IGJhbmQgY29uY2VydCBzaG93IHZpZGVvMgUQIRifBTIFECEYnwUyBRAhGJ8FSMUiULkHWIIQcAF4AZABAJgBvQGgAaUFqgEDNC4yuAEDyAEA-AEBmAIHoAK3BcICChAAGEcY1gQYsAPCAgcQIxiwAhgnwgIIECEYoAEYwwTCAgoQIRgKGKABGMMEwgIIEAAYgAQYogSYAwCIBgGQBgiSBwM1LjKgB7IU&sclient=gws-wiz-serp#fpstate=ive&vld=cid:fecf91dd,vid:qaaohm2sZSE,st:0)
   - Description: This video displays the Soundwave Symphony show in the Show section.
+ 
+
+## Testing 
+
+### Validator Testing 
+
+- HTML
+  - No errors were returned when passing through the official [W3C validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Foluwatobihammed.github.io%2FSoundwaveSymphony%2F)
+- CSS
+  - No errors were found when passing through the official [(Jigsaw) validator](https://jigsaw.w3.org/css-validator/validator?uri=+https%3A%2F%2Foluwatobihammed.github.io%2FSoundwaveSymphony%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
 
  
 
