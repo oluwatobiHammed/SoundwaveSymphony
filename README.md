@@ -29,6 +29,61 @@ The Merchandise section features a selection of stylish merchandise items availa
 ## Contact
 The Contact section provides contact information for users to reach out to Soundwave Symphony with questions or feedback. It includes an email address and links to social media profiles for further engagement.
 
+## HTML Code
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" type="text/css"/>
+    <!-- Include other CSS files -->
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <title>Soundwave Symphony</title>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <!-- Header content -->
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <!-- About section content -->
+    </section>
+
+    <!-- Music Section -->
+    <section id="music" class="music-section">
+        <!-- Music section content -->
+    </section>
+
+    <!-- Shows Section -->
+    <section id="shows" class="shows-section">
+        <!-- Shows section content -->
+    </section>
+
+    <!-- Booking Section -->
+    <section id="booking" class="booking-section">
+        <!-- Booking section content -->
+    </section>
+
+    <!-- Merchandise Section -->
+    <section id="merchandise" class="merchandise-section">
+        <!-- Merchandise section content -->
+    </section>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="contact-footer">
+        <!-- Contact footer content -->
+    </footer>
+
+    <!-- JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>```
+
 ## Technologies Used
 - HTML
 - CSS
