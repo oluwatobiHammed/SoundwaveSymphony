@@ -1,84 +1,96 @@
 
+/* Importing Google Fonts Roboto and Exo */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-
+/* Global styles */
 body {
-    font-family: Arial, sans-serif;
-    overflow-x: hidden;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, sans-serif; /* Default font family */
+    overflow-x: hidden; /* Hide horizontal overflow */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
 }
 
+/* Container styles */
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    overflow-x: hidden;
+    max-width: 1200px; /* Maximum width */
+    margin: 0 auto; /* Center horizontally */
+    padding: 0 20px; /* Add padding */
+    overflow-x: hidden; /* Hide horizontal overflow */
 }
 
+/* Header styles */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    width: 100%;
-    position: fixed;
-    top: 0;
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 10px 0; /* Padding */
+    width: 100%; /* Full width */
+    position: fixed; /* Fixed position */
+    top: 0; /* Stick to the top */
     z-index: 9999; /* Ensure it's above other content */
 }
 
+/* Header title styles */
 header h1 {
-    margin: 0;
-    font-size: 24px;
+    margin: 0; /* Remove margin */
+    font-size: 24px; /* Font size */
 }
 
+/* Navigation styles */
 nav ul {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove list styles */
+    padding: 0; /* Remove default padding */
 }
 
 nav ul li {
-    display: inline;
-    margin-right: 20px;
+    display: inline; /* Display inline */
+    margin-right: 20px; /* Add right margin */
 }
 
 nav ul li a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
 }
 
+/* Section styles */
 section {
-    padding: 40px 0;
+    padding: 40px 0; /* Padding */
 }
 
+/* Section heading styles */
 section h2 {
-    font-size: 36px;
+    font-size: 36px; /* Font size */
 }
 
+/* Footer styles */
 footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    text-align: center;
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 20px 0; /* Padding */
+    text-align: center; /* Center text */
 }
 
+/* Footer paragraph styles */
 footer p {
-    margin: 0;
+    margin: 0; /* Remove margin */
 }
 
+/* Social media list styles */
 .social-media {
-    list-style-type: none;
-    padding: 0;
+    list-style-type: none; /* Remove list styles */
+    padding: 0; /* Remove default padding */
 }
 
 .social-media li {
-    display: inline;
-    margin-right: 10px;
+    display: inline; /* Display inline */
+    margin-right: 10px; /* Add right margin */
 }
 
 .social-media li a {
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline */
 }
+
+
 
 /* header */
 /* Remove existing header navigation styles */
