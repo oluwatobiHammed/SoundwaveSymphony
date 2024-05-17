@@ -576,29 +576,33 @@ footer p {
 }
 
 
+/* Styling for custom alert messages */
 .custom-alert {
-    background-color: #333;
-    color: #fff;
-    padding: 15px;
-    border-radius: 5px;
-    width: 50%;
-    margin: 0 auto;
-    margin-top: 10px;
-    display: none;
-    position: fixed;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 999;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 15px; /* Padding */
+    border-radius: 5px; /* Border radius */
+    width: 50%; /* Width */
+    margin: 0 auto; /* Center horizontally */
+    margin-top: 10px; /* Top margin */
+    display: none; /* Initially hidden */
+    position: fixed; /* Fixed position */
+    bottom: 0; /* Align to bottom */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    z-index: 999; /* Z-index to ensure it's on top */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
 }
 
+/* Error alert style */
 .custom-alert.error {
-    background-color: #f44336;
+    background-color: #f44336; /* Red background color for error */
 }
 
+/* Success alert style */
 .custom-alert.success {
-    background-color: #4caf50;
+    background-color: #4caf50; /* Green background color for success */
 }
+
 
 
