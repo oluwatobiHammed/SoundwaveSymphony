@@ -4,6 +4,7 @@
 
 body {
     font-family: Arial, sans-serif;
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
 }
@@ -12,12 +13,17 @@ body {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
+    overflow-x: hidden;
 }
 
 header {
     background-color: #333;
     color: #fff;
     padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 9999; /* Ensure it's above other content */
 }
 
 header h1 {
@@ -95,6 +101,9 @@ footer p {
     background-color: transparent; /* Transparent background */
 }
 
+.header.expanded {
+    background-color: #555; /* Change this to your desired color */
+}
 .navbar-toggler:focus {
     outline: none; /* Remove focus outline */
 }
@@ -118,6 +127,7 @@ footer p {
 .about-section {
     background-color: #f8f8f8; /* Light background color */
     padding: 50px 0; /* Add padding */
+    padding-top: 150px;
 }
 
 .about-heading {
@@ -196,8 +206,19 @@ footer p {
     border-radius: 10px; /* Add border-radius for curved corners */
     justify-content: center;
     align-items: center;
+    text-align: center;
     background-color: #8b2323; /* Default background color */
     display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.quarter:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.about-content p {
+    margin-bottom: 20px;
 }
 
 
@@ -378,6 +399,13 @@ footer p {
     background-color: #555; /* Darker background color on hover */
 }
 
+.required-notice {
+    color: #f00;
+    font-size: 12px;
+    margin-top: 5px;
+    display: none;
+}
+
 /* Adjust styles for smaller screens */
 @media (max-width: 768px) {
     .booking-form {
@@ -544,6 +572,32 @@ footer p {
         font-size: 14px; /* Reduce font size for smaller screens */
     }
 
+}
+
+
+.custom-alert {
+    background-color: #333;
+    color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 10px;
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.custom-alert.error {
+    background-color: #f44336;
+}
+
+.custom-alert.success {
+    background-color: #4caf50;
 }
 
 
