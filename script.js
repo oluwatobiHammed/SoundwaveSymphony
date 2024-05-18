@@ -115,3 +115,18 @@
             var emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
             return emailRegex.test(email);
         }
+
+        $(".add-to-cart").click(function() {
+            let itemName = $(this).siblings("h3").text();
+            showCustomAlert(itemName + " has been added to your cart.");
+            // Here you can also add code to actually add the item to a shopping cart
+            // For example, updating a cart count, or sending an AJAX request to a server
+        });
+        
+
+        function showCustomAlert(message) {
+            $(".shopping-custom-alert").text(message).fadeIn();
+            setTimeout(function() {
+                $(".shopping-custom-alert").fadeOut();
+            }, 3000); // The alert will disappear after 3 seconds
+        }

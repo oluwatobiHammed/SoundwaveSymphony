@@ -30,49 +30,49 @@
                 <div class="collapse navbar-collapse" id="navbarCollapse">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li> <!-- Navigation link to Home -->
-                        <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li> <!-- Navigation link to Home -->
+                        <li class="nav-item"><a class="nav-link" href="form.html">Booking</a></li> <!-- Navigation link to Home -->
+                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
     </header>
 
-    <!-- Booking Section -->
-    <section id="booking" class="booking-section">
+    <!-- Merchandise Section -->
+    <section id="merchandise" class="merchandise-section">
         <div class="container">
-            <h2 class="booking-heading">Booking</h2> <!-- Heading for Booking section -->
-            <div class="booking-content">
-                <!-- Paragraphs describing booking information -->
-                <p>Interested in booking Soundwave Symphony for your next event? We'd love to bring our electrifying energy and dynamic performances to your stage!</p>
-                <p>Whether you're planning a corporate event, wedding reception, private party, or music festival, Soundwave Symphony is ready to rock your audience and make your event an unforgettable experience.</p>
-                <p>To inquire about our availability and pricing, please fill out the booking inquiry form below. Our team will get back to you as soon as possible to discuss your event details and customize a package that meets your needs.</p>
+            <h2 class="merchandise-heading">Merchandise</h2>
+            <div class="merchandise-content">
+                  <!-- Paragraphs describing merchandise -->
+                <p>Show your support for Soundwave Symphony and rock our stylish merchandise! From trendy t-shirts to sleek posters, we've got something for every fan to enjoy.</p>
                 
-                <!-- Booking Inquiry Form -->
-                <form class="booking-form" id="bookingForm">
-                    <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br>
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
-                    <label for="event-type">Event Type:</label><br>
-                    <select id="event-type" name="event-type" required>
-                        <option value="" disabled selected>Select Event Type</option> <!-- Default and disabled option -->
-                        <option value="Corporate Event">Corporate Event</option>
-                        <option value="Wedding Reception">Wedding Reception</option>
-                        <option value="Private Party">Private Party</option>
-                        <option value="Music Festival">Music Festival</option>
-                    </select><br>
-                    <label for="date">Event Date:</label><br>
-                    <input type="date" id="date" name="date" required><br>
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="4" required></textarea><br>
-                    <input type="submit" value="Submit"> <!-- Submit button -->
-                </form>
-                <div class="custom-alert" id="alert"></div> <!-- Alert message div -->
-                <p>We look forward to collaborating with you to make your event a resounding success!</p>
+                <p>Check out our latest collection of merchandise items below and show off your love for our music wherever you go:</p>
+    
+                <!-- Merchandise items -->
+                <div class="merchandise-items">
+                    <div class="merch-item">
+                        <img src="img/tshirt.jpg" alt="Soundwave Symphony T-shirt">
+                        <h3>Soundwave Symphony T-shirt</h3>
+                        <p>Price: $20</p>
+                        <button class="add-to-cart" >Add to Cart</button>
+                    </div>
+                    <div class="merch-item">
+                        <img src="img/poster.jpg" alt="Soundwave Symphony Poster">
+                        <h3>Soundwave Symphony Poster</h3>
+                        <p>Price: $10</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </div>
+                    <!-- Add more merchandise items here -->
+                </div>
+                 <!-- Instructions for purchasing merchandise -->
+                <p>Ready to rock our merch? Click on the "Add to Cart" button to purchase your favorite items securely through our online store. And don't forget to share your merch selfies with us on social media using the hashtag #SoundwaveSymphony!</p>
             </div>
         </div>
     </section>
     
+       <!-- Custom Alert Notification -->
+       <div class="shopping-custom-alert"></div>
+
     <!-- Contact Footer -->
     <footer id="contact" class="contact-footer">
         <div class="container">

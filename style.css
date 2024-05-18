@@ -432,6 +432,7 @@ footer p {
 .merchandise-section {
     background-color: #fcf8e3; /* Light yellow background color */
     padding: 50px 0; /* Add padding */
+    padding-top: 150px;
 }
 
 .merchandise-heading {
@@ -616,5 +617,18 @@ footer p {
     background-color: #4caf50; /* Green background color for success */
 }
 
+       /* Styles for the custom alert */
+       .shopping-custom-alert {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 15px 20px;
+        background-color: #4caf50;
+        color: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
 
 
