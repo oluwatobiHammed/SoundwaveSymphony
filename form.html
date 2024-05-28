@@ -50,9 +50,9 @@
                 <!-- Booking Inquiry Form -->
                 <form class="booking-form" id="bookingForm">
                     <label for="name">Name:</label><br>
-                    <input type="text" id="name" name="name" required><br>
+                    <input type="text" id="name" name="name" autocomplete="name" required><br>
                     <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required><br>
+                    <input type="email" id="email" name="email" autocomplete="email" required><br>
                     <label for="event-type">Event Type:</label><br>
                     <select id="event-type" name="event-type" required>
                         <option value="" disabled selected>Select Event Type</option> <!-- Default and disabled option -->
@@ -92,7 +92,8 @@
 
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery library -->
-    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> --> <!-- Bootstrap JavaScript (commented out) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>  <!-- Bootstrap JavaScript (commented out) -->
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script> <!-- EmailJS SDK -->
     <script src="script.js"></script> <!-- Custom JavaScript file -->
 </body>
 </html>

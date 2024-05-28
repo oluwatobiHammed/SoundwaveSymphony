@@ -114,7 +114,7 @@ footer p {
 }
 
 .header.expanded {
-    background-color: #555; /* Change this to your desired color */
+    background-color: #78909c ; /* Change this to your desired color */
 }
 .navbar-toggler:focus {
     outline: none; /* Remove focus outline */
@@ -256,7 +256,7 @@ footer p {
     font-size: 16px; /* Font size */
     line-height: 1.6; /* Line height */
     text-align: center; /* Center the content */
-    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background color to improve readability */
+    background-color: #263238; /* Add a semi-transparent background color to improve readability */
     padding: 20px; /* Add padding to the content */
 }
 
@@ -307,7 +307,7 @@ footer p {
     font-size: 16px; /* Font size */
     line-height: 1.6; /* Line height */
     text-align: center; /* Center the content */
-    background-color: rgba(0, 0, 0, 0.6); /* Add a semi-transparent background color to improve readability */
+    background-color: #607d8b; /* Add a semi-transparent background color to improve readability */
     padding: 20px; /* Add padding to the content */
 }
 

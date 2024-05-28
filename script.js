@@ -23,16 +23,11 @@
         $('.navbar-collapse').removeClass('show');
     });
 
-    //$(document).ready(function(){
-      // Animate the quarters on hover
       $(".quarter").hover(function(){
         $(this).css("transform", "scale(1.2)");
     }, function(){
         $(this).css("transform", "scale(1)");
     });
-   // });
-
-    //$(document).ready(function(){
 
             // Smooth scroll to booking section
        $(".smooth-scroll").click(function() {
@@ -51,7 +46,7 @@
         // Form submission handling
         $(".booking-form").submit(function(event) {
             event.preventDefault();
-
+            console.log('Got Here...');
                         // Get form values
                         var name = $("#name").val().trim();
                         var email = $("#email").val().trim();
@@ -75,36 +70,46 @@
                  return false;
              }
 
+
+
                  // Check if the email address is valid
             if (!isValidEmail(email)) {
                 $('#alert').removeClass('success').addClass('error').html('Please enter a valid email address.').fadeIn();
                 setTimeout(function(){ $('#alert').fadeOut() }, 4000);
                 return false;
             }
-    
            
-            var formData = $(this).serialize();
-            var actionUrl = 'https://formsubmit.co/' + encodeURIComponent(email);
-            $.ajax({
-                type: 'POST',
-                url: actionUrl,
-                data: formData,
-                success: function(response) {
-                    console.log('loaded',response); // Check the response from the server
-                    $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
+
+            emailjs.init("Qur9J272yrutlMj77");
+
+            emailjs.send("service_zeodffs", "template_s6rjjmy", {
+                sendername: "Soundwave Symphony",
+                to: this.email.value,
+                subject: "New Booking Request",
+                message: "Thank you for booking a project with us. We appreciate your interest in working with us. \n\nYour details are as follows:\n\n" +
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Event Type: " + eventType + "\n" +
+                "Date: " + date + "\n" +
+                "Message: " + message + ".\n\n" +
+                "We will get back to you soon."
+   
+
+            }).then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
+                $("#name").val('');
+                $("#email").val('');
+                $("#event-type").val('');
+                $("#date").val('');
+                $("#message").val('');
+                setTimeout(function(){ $('#alert').fadeOut() }, 4000);
                     // Clear the form
-                    $("#name").val('');
-                    $("#email").val('');
-                    $("#event-type").val('');
-                    $("#date").val('');
-                    $("#message").val('');
-                    setTimeout(function(){ $('#alert').fadeOut() }, 4000);
-                },
-                error: function(xhr, status, error) {
-                    console.error(xhr.responseText);
-                    $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
-                    setTimeout(function(){ $('#alert').fadeOut() }, 4000);
-                }
+ 
+            }, function(error) {
+                console.log('FAILED...', error);
+                $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
+                setTimeout(function(){ $('#alert').fadeOut() }, 4000);
             });
             
             return false; // Prevent the default form submission
@@ -130,3 +135,49 @@
                 $(".shopping-custom-alert").fadeOut();
             }, 3000); // The alert will disappear after 3 seconds
         }
+
+        $('.datepicker').datepicker();
+
+        document.addEventListener("DOMContentLoaded", function() {
+            $(".sidenav").sidenav({edge: "right"});
+            $(".collapsible").collapsible();
+            $(".tooltipped").tooltip();
+            $("select").formSelect();
+            $(".datepicker").datepicker({
+                format: "dd mmmm, yyyy",
+                yearRange: 3,
+                showClearBtn: true,
+                i18n: {
+                    done: "Select"
+                }
+            });
+        
+            validateMaterializeSelect();
+            function validateMaterializeSelect() {
+                let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
+                let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
+                if ($("select.validate").prop("required")) {
+                    $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
+                }
+                $(".select-wrapper input.select-dropdown").on("focusin", function () {
+                    $(this).parent(".select-wrapper").on("change", function () {
+                        if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
+                            $(this).children("input").css(classValid);
+                        }
+                    });
+                }).on("click", function () {
+                    if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(0, 0, 0, 0.03)") {
+                        $(this).parent(".select-wrapper").children("input").css(classValid);
+                    } else {
+                        $(".select-wrapper input.select-dropdown").on("focusout", function () {
+                            if ($(this).parent(".select-wrapper").children("select").prop("required")) {
+                                if ($(this).css("border-bottom") != "1px solid rgb(76, 175, 80)") {
+                                    $(this).parent(".select-wrapper").children("input").css(classInvalid);
+                                }
+                            }
+                        });
+                    }
+                });
+            }
+        });
+             
