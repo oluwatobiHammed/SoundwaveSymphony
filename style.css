@@ -1,13 +1,16 @@
-
 /* Importing Google Fonts Roboto and Exo */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
 /* Global styles */
 body {
-    font-family: Arial, sans-serif; /* Default font family */
-    overflow-x: hidden; /* Hide horizontal overflow */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    font-family: Arial, sans-serif;
+    /* Default font family */
+    overflow-x: hidden;
+    /* Hide horizontal overflow */
+    margin: 0;
+    /* Remove default margin */
+    padding: 0;
+    /* Remove default padding */
     display: flex;
     min-height: 100vh;
     flex-direction: column;
@@ -15,53 +18,74 @@ body {
 
 /* Container styles */
 .container {
-    max-width: 1200px; /* Maximum width */
-    margin: 0 auto; /* Center horizontally */
-    padding: 0 20px; /* Add padding */
-    overflow-x: hidden; /* Hide horizontal overflow */
+    max-width: 1200px;
+    /* Maximum width */
+    margin: 0 auto;
+    /* Center horizontally */
+    padding: 0 20px;
+    /* Add padding */
+    overflow-x: hidden;
+    /* Hide horizontal overflow */
 }
 
 /* Header styles */
 header {
-    background-color: #333; /* Background color */
-    color: #fff; /* Text color */
-    padding: 10px 0; /* Padding */
-    width: 100%; /* Full width */
-    position: fixed; /* Fixed position */
-    top: 0; /* Stick to the top */
-    z-index: 9999; /* Ensure it's above other content */
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    padding: 10px 0;
+    /* Padding */
+    width: 100%;
+    /* Full width */
+    position: fixed;
+    /* Fixed position */
+    top: 0;
+    /* Stick to the top */
+    z-index: 9999;
+    /* Ensure it's above other content */
 }
 
 /* Header title styles */
 header h1 {
-    margin: 0; /* Remove margin */
-    font-size: 24px; /* Font size */
+    margin: 0;
+    /* Remove margin */
+    font-size: 24px;
+    /* Font size */
 }
 
 /* Navigation styles */
 nav ul {
-    list-style-type: none; /* Remove list styles */
-    padding: 0; /* Remove default padding */
+    list-style-type: none;
+    /* Remove list styles */
+    padding: 0;
+    /* Remove default padding */
 }
 
 nav ul li {
-    display: inline; /* Display inline */
-    margin-right: 20px; /* Add right margin */
+    display: inline;
+    /* Display inline */
+    margin-right: 20px;
+    /* Add right margin */
 }
 
 nav ul li a {
-    color: #fff; /* Link color */
-    text-decoration: none; /* Remove underline */
+    color: #fff;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
 }
 
 /* Section styles */
 section {
-    padding: 40px 0; /* Padding */
+    padding: 40px 0;
+    /* Padding */
 }
 
 /* Section heading styles */
 section h2 {
-    font-size: 36px; /* Font size */
+    font-size: 36px;
+    /* Font size */
 }
 
 main {
@@ -87,31 +111,42 @@ main {
 
 /* Footer styles */
 footer {
-    background-color: #333; /* Background color */
-    color: #fff; /* Text color */
-    padding: 20px 0; /* Padding */
-    text-align: center; /* Center text */
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    padding: 20px 0;
+    /* Padding */
+    text-align: center;
+    /* Center text */
 }
 
 /* Footer paragraph styles */
 footer p {
-    margin: 0; /* Remove margin */
+    margin: 0;
+    /* Remove margin */
 }
 
 /* Social media list styles */
 .social-media {
-    list-style-type: none; /* Remove list styles */
-    padding: 0; /* Remove default padding */
+    list-style-type: none;
+    /* Remove list styles */
+    padding: 0;
+    /* Remove default padding */
 }
 
 .social-media li {
-    display: inline; /* Display inline */
-    margin-right: 10px; /* Add right margin */
+    display: inline;
+    /* Display inline */
+    margin-right: 10px;
+    /* Add right margin */
 }
 
 .social-media li a {
-    color: #fff; /* Link color */
-    text-decoration: none; /* Remove underline */
+    color: #fff;
+    /* Link color */
+    text-decoration: none;
+    /* Remove underline */
 }
 
 
@@ -130,18 +165,26 @@ footer p {
 
 /* Custom styles for the hamburger menu icon */
 .navbar-toggler {
-    color: #fff; /* Color of the hamburger menu icon */
-    border: none; /* Remove border */
-    padding: 0.25rem 0.75rem; /* Padding for the hamburger menu icon */
-    font-size: 1.25rem; /* Adjust font size */
-    background-color: transparent; /* Transparent background */
+    color: #fff;
+    /* Color of the hamburger menu icon */
+    border: none;
+    /* Remove border */
+    padding: 0.25rem 0.75rem;
+    /* Padding for the hamburger menu icon */
+    font-size: 1.25rem;
+    /* Adjust font size */
+    background-color: transparent;
+    /* Transparent background */
 }
 
 .header.expanded {
-    background-color: #78909c ; /* Change this to your desired color */
+    background-color: #78909c;
+    /* Change this to your desired color */
 }
+
 .navbar-toggler:focus {
-    outline: none; /* Remove focus outline */
+    outline: none;
+    /* Remove focus outline */
 }
 
 .navbar-toggler-icon {
@@ -150,57 +193,77 @@ footer p {
 
 @media (min-width: 768px) {
     .navbar-toggler {
-        display: none; /* Hide the hamburger menu icon on larger screens */
+        display: none;
+        /* Hide the hamburger menu icon on larger screens */
     }
 
     .header-nav {
-        display: block; /* Display the navigation links on larger screens */
+        display: block;
+        /* Display the navigation links on larger screens */
     }
 }
 
 
 /* About Section */
 .about-section {
-    background-color: #f8f8f8; /* Light background color */
-    padding: 50px 0; /* Add padding */
+    background-color: #f8f8f8;
+    /* Light background color */
+    padding: 50px 0;
+    /* Add padding */
     padding-top: 150px;
 }
 
 .about-heading {
-    font-size: 36px; /* Larger font size */
-    margin-bottom: 20px; /* Add margin bottom */
-    text-align: center; /* Center the heading */
+    font-size: 36px;
+    /* Larger font size */
+    margin-bottom: 20px;
+    /* Add margin bottom */
+    text-align: center;
+    /* Center the heading */
 }
 
 .about-content {
-    background-image: url('img/monkeyMusic.jpg'); /* Add the path to your image */
-    font-size: 16px; /* Font size */
-    line-height: 1.6; /* Line height */
-    text-align: center; /* Center the heading */
+    background-image: url('img/monkeyMusic.jpg');
+    /* Add the path to your image */
+    font-size: 16px;
+    /* Font size */
+    line-height: 1.6;
+    /* Line height */
+    text-align: center;
+    /* Center the heading */
     background-size: cover;
     background-position: center;
-    padding: 20px; /* Adjust padding as needed */
-    border-radius: 10px; /* Add border-radius for curved corners */
+    padding: 20px;
+    /* Adjust padding as needed */
+    border-radius: 10px;
+    /* Add border-radius for curved corners */
 }
 
 .about-content p {
-    margin-bottom: 20px; /* Add margin bottom */
-    color: #ffffff; /* Set text color to ensure readability */
+    margin-bottom: 20px;
+    /* Add margin bottom */
+    color: #ffffff;
+    /* Set text color to ensure readability */
 }
 
 .quarterP {
-    text-align: center; /* Center text within paragraph */
-    color: #ffffff; /* Set text color to ensure readability */
-    text-align: center; /* Center the heading */
+    text-align: center;
+    /* Center text within paragraph */
+    color: #ffffff;
+    /* Set text color to ensure readability */
+    text-align: center;
+    /* Center the heading */
     margin: 0 10px;
 }
 
 #firstpar {
-    margin-top: 65px; /* Add margin bottom */
+    margin-top: 65px;
+    /* Add margin bottom */
 }
 
-#lastpar{
-    margin-bottom: 65px; /* Add margin bottom */
+#lastpar {
+    margin-bottom: 65px;
+    /* Add margin bottom */
 }
 
 .row {
@@ -217,12 +280,17 @@ footer p {
 
 /* Define background colors for each column */
 .quarters-container {
-    margin-top: 0px; /* Add margin bottom */
-    margin-left: 12%; /* Add margin bottom */
-    padding: 20px; /* Add padding for spacing */
+    margin-top: 0px;
+    /* Add margin bottom */
+    margin-left: 12%;
+    /* Add margin bottom */
+    padding: 20px;
+    /* Add padding for spacing */
     padding-top: 0;
-    margin-top: 20px; /* Add margin to separate from the about-content */
-    padding: 10px; /* Add padding for spacing between quarters */
+    margin-top: 20px;
+    /* Add margin to separate from the about-content */
+    padding: 10px;
+    /* Add padding for spacing between quarters */
     justify-content: center;
     align-items: center;
 
@@ -232,15 +300,21 @@ footer p {
 
 
 .quarter {
-    height: 100px; /* Set height for each quarter */
-    width: 80%; /* Set width for each quarter */
-    margin-bottom: 10px; /* Add margin to separate quarters */
-    margin-left: 20px; /* Add margin to separate quarters */
-    border-radius: 10px; /* Add border-radius for curved corners */
+    height: 100px;
+    /* Set height for each quarter */
+    width: 80%;
+    /* Set width for each quarter */
+    margin-bottom: 10px;
+    /* Add margin to separate quarters */
+    margin-left: 20px;
+    /* Add margin to separate quarters */
+    border-radius: 10px;
+    /* Add border-radius for curved corners */
     justify-content: center;
     align-items: center;
     text-align: center;
-    background-color: #8b2323; /* Default background color */
+    background-color: #8b2323;
+    /* Default background color */
     display: flex;
     transition: transform 0.3s ease-in-out;
 }
@@ -259,59 +333,87 @@ footer p {
 /* Music Section */
 .music-section {
 
-    background-image: url('img/showposter.jpg'); /* Add the path to your image */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the background image */
-    color: #fff; /* Text color */
-    padding: 100px 0; /* Adjust padding as needed */
-    
+    background-image: url('img/showposter.jpg');
+    /* Add the path to your image */
+    background-size: cover;
+    /* Cover the entire section */
+    background-position: center;
+    /* Center the background image */
+    color: #fff;
+    /* Text color */
+    padding: 100px 0;
+    /* Adjust padding as needed */
+
 }
 
 .music-heading {
-    font-size: 36px; /* Larger font size */
-    margin-bottom: 20px; /* Add margin bottom */
-    text-align: center; /* Center the content */
+    font-size: 36px;
+    /* Larger font size */
+    margin-bottom: 20px;
+    /* Add margin bottom */
+    text-align: center;
+    /* Center the content */
 }
 
 .music-content {
-    font-size: 16px; /* Font size */
-    line-height: 1.6; /* Line height */
-    text-align: center; /* Center the content */
-    background-color: #263238; /* Add a semi-transparent background color to improve readability */
-    padding: 20px; /* Add padding to the content */
+    font-size: 16px;
+    /* Font size */
+    line-height: 1.6;
+    /* Line height */
+    text-align: center;
+    /* Center the content */
+    background-color: #263238;
+    /* Add a semi-transparent background color to improve readability */
+    padding: 20px;
+    /* Add padding to the content */
 }
 
 .music-content p {
-    margin-bottom: 15px; /* Add margin bottom */
+    margin-bottom: 15px;
+    /* Add margin bottom */
 }
 
 .about-image {
-    border-radius: 15px; /* Adjust the value to change the degree of curvature */
-    width: 80%; /* Reduce the size by 20% */
+    border-radius: 15px;
+    /* Adjust the value to change the degree of curvature */
+    width: 80%;
+    /* Reduce the size by 20% */
 }
 
 /* Shows Section */
 
 .shows-section {
 
-    background-image: url('img/stageShowposter.jpg'); /* Add the path to your image */
-    background-size: cover; /* Cover the entire section */
-    background-position: center; /* Center the background image */
-    color: #fff; /* Text color */
-    padding: 100px 0; /* Adjust padding as needed */
+    background-image: url('img/stageShowposter.jpg');
+    /* Add the path to your image */
+    background-size: cover;
+    /* Cover the entire section */
+    background-position: center;
+    /* Center the background image */
+    color: #fff;
+    /* Text color */
+    padding: 100px 0;
+    /* Adjust padding as needed */
 }
 
 .shows-heading {
-    font-size: 36px; /* Larger font size */
-    margin-bottom: 20px; /* Add margin bottom */
-    text-align: center; /* Center the heading */
-    color: #403b3b; /* Text color */
+    font-size: 36px;
+    /* Larger font size */
+    margin-bottom: 20px;
+    /* Add margin bottom */
+    text-align: center;
+    /* Center the heading */
+    color: #403b3b;
+    /* Text color */
 }
 
 .upcoming-shows-heading {
-    font-size: 24px; /* Larger font size for upcoming shows heading */
-    margin-bottom: 10px; /* Add margin bottom */
-    margin-top: 20px; /* Add margin at the top */
+    font-size: 24px;
+    /* Larger font size for upcoming shows heading */
+    margin-bottom: 10px;
+    /* Add margin bottom */
+    margin-top: 20px;
+    /* Add margin at the top */
 }
 
 .upcoming-shows-list {
@@ -321,69 +423,92 @@ footer p {
 }
 
 .upcoming-shows-list li {
-    margin-bottom: 10px; /* Add margin bottom for each list item */
+    margin-bottom: 10px;
+    /* Add margin bottom for each list item */
 }
 
 .shows-content {
-    font-size: 16px; /* Font size */
-    line-height: 1.6; /* Line height */
-    text-align: center; /* Center the content */
-    background-color: #607d8b; /* Add a semi-transparent background color to improve readability */
-    padding: 20px; /* Add padding to the content */
+    font-size: 16px;
+    /* Font size */
+    line-height: 1.6;
+    /* Line height */
+    text-align: center;
+    /* Center the content */
+    background-color: #607d8b;
+    /* Add a semi-transparent background color to improve readability */
+    padding: 20px;
+    /* Add padding to the content */
 }
 
 .ticket-link {
-    color: rgb(235, 8, 8); /* Change the color to indicate it's not clickable */
-    text-decoration: none; /* Remove underline */
-    cursor: not-allowed; /* Change cursor to indicate it's not clickable */
+    color: rgb(235, 8, 8);
+    /* Change the color to indicate it's not clickable */
+    text-decoration: none;
+    /* Remove underline */
+    cursor: not-allowed;
+    /* Change cursor to indicate it's not clickable */
 }
 
 /* Responsive styling for YouTube video */
 .video-container {
     position: relative;
     width: 80%;
-    padding-bottom: 56.25%; /* Aspect ratio: 16:9 */
+    padding-bottom: 56.25%;
+    /* Aspect ratio: 16:9 */
     overflow: hidden;
     max-width: 100%;
-    margin: auto; /* Center the video */
-    border-radius: 10px; /* Corner radius */
+    margin: auto;
+    /* Center the video */
+    border-radius: 10px;
+    /* Corner radius */
 }
 
 .youtube-video {
     position: absolute;
     top: 0;
     left: 0;
-    border: none; /* Remove border */
+    border: none;
+    /* Remove border */
     width: 100%;
     height: 100%;
-    border-radius: 10px; /* Corner radius */
+    border-radius: 10px;
+    /* Corner radius */
 }
 
 
 /* Adjust styles for smaller screens */
 @media (max-width: 768px) {
     .container {
-        padding: 0 10px; /* Reduce padding for smaller screens */
+        padding: 0 10px;
+        /* Reduce padding for smaller screens */
     }
 }
 
 /* Booking Section */
 .booking-section {
-    background-color: #f9f9f9; /* Light background color */
-    padding: 50px 0; /* Add padding */
+    background-color: #f9f9f9;
+    /* Light background color */
+    padding: 50px 0;
+    /* Add padding */
     padding-top: 150px;
 }
 
 .booking-heading {
-    font-size: 36px; /* Larger font size */
-    margin-bottom: 20px; /* Add margin bottom */
-    text-align: center; /* Center the heading */
+    font-size: 36px;
+    /* Larger font size */
+    margin-bottom: 20px;
+    /* Add margin bottom */
+    text-align: center;
+    /* Center the heading */
 }
 
 .booking-content {
-    font-size: 16px; /* Font size */
-    line-height: 1.6; /* Line height */
-    text-align: center; /* Center the content */
+    font-size: 16px;
+    /* Font size */
+    line-height: 1.6;
+    /* Line height */
+    text-align: center;
+    /* Center the content */
 }
 
 
@@ -400,172 +525,227 @@ footer p {
 /* Merchandise Section */
 
 .merchandise-section {
-    background-color: #fcf8e3; /* Light yellow background color */
-    padding: 50px 0; /* Add padding */
+    background-color: #fcf8e3;
+    /* Light yellow background color */
+    padding: 50px 0;
+    /* Add padding */
     padding-top: 150px;
 }
 
 .merchandise-heading {
-    font-size: 36px; /* Larger font size */
-    margin-bottom: 20px; /* Add margin bottom */
-    text-align: center; /* Center the heading */
+    font-size: 36px;
+    /* Larger font size */
+    margin-bottom: 20px;
+    /* Add margin bottom */
+    text-align: center;
+    /* Center the heading */
 }
 
 .merchandise-content {
-    font-size: 16px; /* Font size */
-    line-height: 1.6; /* Line height */
-    text-align: center; /* Center the content */
+    font-size: 16px;
+    /* Font size */
+    line-height: 1.6;
+    /* Line height */
+    text-align: center;
+    /* Center the content */
 }
 
 .merchandise-items {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 20px; /* Add space between items */
+    gap: 20px;
+    /* Add space between items */
 }
 
 .merch-item {
-    flex-basis: calc(50% - 20px); /* Adjust item width */
-    margin-bottom: 30px; /* Add margin bottom */
-    width: 300px; /* Set a fixed width for items */
+    flex-basis: calc(50% - 20px);
+    /* Adjust item width */
+    margin-bottom: 30px;
+    /* Add margin bottom */
+    width: 300px;
+    /* Set a fixed width for items */
     padding: 20px;
     background-color: #fff;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Add shadow */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* Add shadow */
 }
 
 .merch-item img {
-    max-width: 100%; /* Make images responsive */
-    border-radius: 5px; /* Add border radius */
-    margin-bottom: 10px; /* Add margin bottom */
+    max-width: 100%;
+    /* Make images responsive */
+    border-radius: 5px;
+    /* Add border radius */
+    margin-bottom: 10px;
+    /* Add margin bottom */
     height: auto;
     border-radius: 5px;
 }
 
 .merch-item h3 {
-    font-size: 24px; /* Adjust font size */
-    margin-bottom: 5px; /* Add margin bottom */
+    font-size: 24px;
+    /* Adjust font size */
+    margin-bottom: 5px;
+    /* Add margin bottom */
 }
 
 .merch-item p {
-    margin-bottom: 10px; /* Add margin bottom */
+    margin-bottom: 10px;
+    /* Add margin bottom */
 }
 
 .merch-item button {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* Light text color */
+    background-color: #333;
+    /* Dark background color */
+    color: #fff;
+    /* Light text color */
     border: none;
-    padding: 10px 20px; /* Add padding */
-    border-radius: 5px; /* Add border radius */
+    padding: 10px 20px;
+    /* Add padding */
+    border-radius: 5px;
+    /* Add border radius */
     cursor: pointer;
 }
 
 .merch-item button:hover {
-    background-color: #555; /* Darker background color on hover */
+    background-color: #555;
+    /* Darker background color on hover */
 }
 
 /* Adjust styles for smaller screens */
 @media (max-width: 768px) {
     .merch-item {
-        width: calc(50% - 20px); /* Set width to 50% minus margin */
+        width: calc(50% - 20px);
+        /* Set width to 50% minus margin */
     }
 }
 
 @media (max-width: 576px) {
     .merch-item {
-        width: calc(100% - 20px); /* Set width to 100% minus margin */
+        width: calc(100% - 20px);
+        /* Set width to 100% minus margin */
     }
 }
 
 
 /* Footer */
 .contact-footer {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* Light text color */
-    padding: 20px 0; /* Add padding */
+    background-color: #333;
+    /* Dark background color */
+    color: #fff;
+    /* Light text color */
+    padding: 20px 0;
+    /* Add padding */
 }
 
 
 .contact-info {
-    text-align: center; /* Center the contact info */
-    margin-bottom: 20px; /* Add margin bottom */
+    text-align: center;
+    /* Center the contact info */
+    margin-bottom: 20px;
+    /* Add margin bottom */
 }
 
 .social-media {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    text-align: center; /* Center the social media icons */
+    text-align: center;
+    /* Center the social media icons */
 }
 
 .social-media li {
-    display: inline-block; /* Display icons inline */
-    margin: 0 10px; /* Add margin between icons */
+    display: inline-block;
+    /* Display icons inline */
+    margin: 0 10px;
+    /* Add margin between icons */
 }
 
 .social-media li:last-child {
-    margin-right: 0; /* Remove margin right for the last item */
+    margin-right: 0;
+    /* Remove margin right for the last item */
 }
 
 .social-media li a {
     color: #fff;
     text-decoration: none;
-    font-size: 20px; /* Font size */
-    padding: 10px 20px; /* Add padding */
-    border-radius: 5px; /* Add border radius */
-    background-color: #555; /* Button background color */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 20px;
+    /* Font size */
+    padding: 10px 20px;
+    /* Add padding */
+    border-radius: 5px;
+    /* Add border radius */
+    background-color: #555;
+    /* Button background color */
+    transition: background-color 0.3s ease;
+    /* Smooth transition */
 }
 
 
 
 .social-media .social-link {
     display: inline-block;
-    width: 40px; /* Adjust the width of the icon container */
-    height: 40px; /* Adjust the height of the icon container */
-    background-color: #333; /* Background color of the icon container */
-    border-radius: 50%; /* Make the container round */
+    width: 40px;
+    /* Adjust the width of the icon container */
+    height: 40px;
+    /* Adjust the height of the icon container */
+    background-color: #333;
+    /* Background color of the icon container */
+    border-radius: 50%;
+    /* Make the container round */
     text-align: center;
-    line-height: 40px; /* Center the icon vertically */
-    margin-right: 10px; /* Add margin between icons */
+    line-height: 40px;
+    /* Center the icon vertically */
+    margin-right: 10px;
+    /* Add margin between icons */
 }
 
 .social-media .social-link i {
-    color: #fff; /* Color of the icon */
-    font-size: 20px; /* Adjust the size of the icon */
-    transition: color 0.3s ease; /* Smooth transition */
+    color: #fff;
+    /* Color of the icon */
+    font-size: 20px;
+    /* Adjust the size of the icon */
+    transition: color 0.3s ease;
+    /* Smooth transition */
 }
 
 .social-media li a:hover {
-    color: #ccc; /* Change color on hover */
+    color: #ccc;
+    /* Change color on hover */
 }
 
 .social-media .social-link:hover i {
-    color: #777; /* Darker color on hover */
+    color: #777;
+    /* Darker color on hover */
 }
 
 /* Adjust styles for smaller screens */
 @media (max-width: 768px) {
     .social-media li {
-        margin: 0 5px; /* Reduce margin between icons */
+        margin: 0 5px;
+        /* Reduce margin between icons */
     }
 
     .quarters-container {
-        margin-left: 6%; /* Add margin bottom */
+        margin-left: 6%;
+        /* Add margin bottom */
     }
 }
 
 @media (max-width: 576px) {
     .contact-info {
-        font-size: 14px; /* Reduce font size for smaller screens */
+        font-size: 14px;
+        /* Reduce font size for smaller screens */
     }
 
 }
 
 @media (max-width: 1024px) {
-    
+
     .quarters-container {
-        margin-left: 10%; /* Add margin bottom */
+        margin-left: 10%;
+        /* Add margin bottom */
     }
 
 }
@@ -575,26 +755,42 @@ footer p {
 
 /* Styling for custom alert messages */
 .custom-alert {
-    background-color: #333; /* Background color */
-    color: #fff; /* Text color */
-    padding: 15px; /* Padding */
-    border-radius: 5px; /* Border radius */
-    width: 50%; /* Width */
-    margin: 0 auto; /* Center horizontally */
-    margin-top: 10px; /* Top margin */
-    display: none; /* Initially hidden */
-    position: fixed; /* Fixed position */
-    bottom: 0; /* Align to bottom */
-    left: 50%; /* Center horizontally */
-    transform: translateX(-50%); /* Center horizontally */
-    z-index: 999; /* Z-index to ensure it's on top */
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
+    background-color: #333;
+    /* Background color */
+    color: #fff;
+    /* Text color */
+    padding: 15px;
+    /* Padding */
+    border-radius: 5px;
+    /* Border radius */
+    width: 50%;
+    /* Width */
+    margin: 0 auto;
+    /* Center horizontally */
+    margin-top: 10px;
+    /* Top margin */
+    display: none;
+    /* Initially hidden */
+    position: fixed;
+    /* Fixed position */
+    bottom: 0;
+    /* Align to bottom */
+    left: 50%;
+    /* Center horizontally */
+    transform: translateX(-50%);
+    /* Center horizontally */
+    z-index: 999;
+    /* Z-index to ensure it's on top */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    /* Box shadow for depth */
 }
 
 /* Error alert style */
 .custom-alert.error {
-    background-color: #f44336; /* Red background color for error */
+    background-color: #f44336;
+    /* Red background color for error */
 }
+
 /* Success alert style */
 .custom-alert.success {
     background-color: #4caf50;
@@ -624,9 +820,70 @@ footer p {
 
 
 .custom-datepicker-dropdown {
-    margin-top: 15px !important; /* Adjust the value as needed */
-  }
-  .datepicker-modal {
-  margin-top: 60px !important; /* Adjust this value to your needs */
+    margin-top: 15px !important;
+    /* Adjust the value as needed */
 }
 
+.datepicker-modal {
+    margin-top: 60px !important;
+    /* Adjust this value to your needs */
+}
+
+
+.header-title {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.custom-navbar {
+    margin-top: 20px;
+}
+
+.sidenav-title {
+    font-size: 1.5em;
+    /* Adjust this size as needed */
+}
+
+@media (max-width: 1024px) {
+    .header-title {
+        font-size: 1.5em;
+        margin-top: 0;
+    }
+
+    .custom-navbar {
+        margin-top: 10px;
+    }
+
+    nav .brand-logo {
+        font-size: 1.5em;
+    }
+
+    .sidenav-title {
+        font-size: 1.2em;
+        /* Adjust this size as needed for smaller screens */
+    }
+
+    .sidenav-header {
+        background-color: #403b3b;
+        /* Set background color */
+        color: white;
+        /* Set text color to white for better contrast */
+        padding: 15px;
+        text-align: center;
+    }
+
+
+    /* Custom styles for the sidenav */
+    .sidenav-overlay {
+        transition: opacity 0.25s;
+        /* Set transition duration to 0 seconds */
+    }
+
+
+    .sidenav {
+        transition: none;
+        /* Remove transition property */
+    }
+
+
+}

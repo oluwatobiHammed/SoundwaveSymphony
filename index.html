@@ -16,9 +16,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
     <link rel="icon" sizes="180x180" href="img/favicon.ico" type="image/x-icon">
+    <!-- Import Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="style.css" type="text/css">
-
-
     <!-- Title of the webpage -->
     <title>Soundwave Symphony</title>
 
@@ -32,14 +32,11 @@
             <!-- Title of the website -->
             <h1 class="header-title">Soundwave Symphony</h1>
             <!-- Navigation bar -->
-            <nav class="navbar navbar-expand-md custom-navbar">
+            <nav class="custom-navbar">
                 <div class="nav-wrapper">
-                    <!-- Toggler button for collapsed navigation on small screens -->
-                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
-                        aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button> -->
-                    <!-- Navigation links -->
+                    <!-- <a href="#" class="brand-logo">Soundwave Symphony</a> -->
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i class="material-icons">menu</i></a>
+                    <!-- Navigation links for larger screens -->
                     <ul class="right hide-on-med-and-down">
                         <li><a href="#about">About</a></li>
                         <li><a href="#music">Music</a></li>
@@ -51,16 +48,18 @@
                 </div>
             </nav>
         </div>
-
-            <!-- Navigation links -->
-            <ul class="sidenav" id="mobile-demo">
-                <li><a href="#about">About</a></li>
-                <li><a href="#music">Music</a></li>
-                <li><a href="#shows">Shows</a></li>
-                <li><a href="form.html">Booking</a></li>
-                <li><a href="merchandise.html">Merchandise</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+        <!-- Navigation links for smaller screens -->
+        <ul class="sidenav" id="mobile-demo">
+            <li class="sidenav-header">
+                <h4 class="center-align sidenav-title">Soundwave Symphony</h4>
+            </li>
+            <li><a class="sidenav-close-link" href="#about">About</a></li>
+            <li><a class="sidenav-close-link" href="#music">Music</a></li>
+            <li><a class="sidenav-close-link" href="#shows">Shows</a></li>
+            <li><a class="sidenav-close-link" href="form.html">Booking</a></li>
+            <li><a class="sidenav-close-link" href="merchandise.html">Merchandise</a></li>
+            <li><a class="sidenav-close-link" href="#contact">Contact</a></li>
+        </ul>
     </header>
 
 

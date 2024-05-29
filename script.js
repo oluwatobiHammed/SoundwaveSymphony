@@ -115,7 +115,7 @@ $("#booking-form").submit(function (event) {
             "We will get back to you soon."
     }).then(function (response) {
 
-        
+
         $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
         $("#name").val('');
         $("#email").val('');
@@ -170,7 +170,6 @@ function showCustomAlert(message) {
  * Initialize Materialize components on DOMContentLoaded event
  */
 document.addEventListener("DOMContentLoaded", function () {
-    $(".sidenav").sidenav({ edge: "right" });
     $(".collapsible").collapsible();
     $(".tooltipped").tooltip();
     $("select").formSelect();
@@ -193,6 +192,8 @@ document.addEventListener("DOMContentLoaded", function () {
             modaldatepicker.style.marginTop = '50px'; /* Adjust this value to your needs */
         }
       }
+
+      
     });
 
     validateMaterializeSelect();
@@ -226,6 +227,22 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     }
+});
+
+$(document).ready(function(){
+    // Initialize sidenav when the document is fully loaded
+    $('.sidenav').sidenav({
+        closeOnClick: true, // Close the sidenav when clicking on a link
+        inDuration: 250,  // Duration of the in transition
+        outDuration: 200, // Duration of the out transition
+        edge: 'right'     // Choose the horizontal origin for the drawer (right or left)
+    });
+
+       // Close sidenav when a link is clicked
+       $('.sidenav-close-link').on('click', function() {
+        var sidenavInstance = M.Sidenav.getInstance($('#mobile-demo'));
+        sidenavInstance.close();
+    }); 
 });
 
 /**
