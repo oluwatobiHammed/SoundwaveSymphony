@@ -27,7 +27,7 @@
 <body>
 
     <!-- Header section -->
-    <header class="header">
+    <header>
         <div class="container">
             <!-- Title of the website -->
             <h1 class="header-title">Soundwave Symphony</h1>
@@ -35,22 +35,32 @@
             <nav class="navbar navbar-expand-md custom-navbar">
                 <div class="nav-wrapper">
                     <!-- Toggler button for collapsed navigation on small screens -->
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
                         aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button>
+                    </button> -->
                     <!-- Navigation links -->
                     <ul class="right hide-on-med-and-down">
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#music">Music</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#shows">Shows</a></li>
-                        <li class="nav-item"><a class="nav-link" href="form.html">Booking</a></li>
-                        <li class="nav-item"><a class="nav-link" href="merchandise.html">Merchandise</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#shows">Shows</a></li>
+                        <li><a href="form.html">Booking</a></li>
+                        <li><a href="merchandise.html">Merchandise</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </nav>
         </div>
+
+            <!-- Navigation links -->
+            <ul class="sidenav" id="mobile-demo">
+                <li><a href="#about">About</a></li>
+                <li><a href="#music">Music</a></li>
+                <li><a href="#shows">Shows</a></li>
+                <li><a href="form.html">Booking</a></li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
     </header>
 
 
@@ -81,31 +91,21 @@
 
             </div>
 
-            <!-- Div containing the quarters representing key aspects -->
-            <div class="quarters-container d-flex justify-content-center align-items-center">
-                <div class="row">
-                    <div class="col-sm-6 col-md-3">
-                        <div class="quarter" style="background-color: #8b2323;">
-                            <p class="quarterP">Creativity and innovation.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="quarter" style="background-color: #8b2323;">
-                            <p class="quarterP"> Unites listeners</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="quarter" style="background-color: #8b2323;">
-                            <p class="quarterP"> Evolve and grow.</p>
-                        </div>
-                    </div>
-                    <div class="col-sm-6 col-md-3">
-                        <div class="quarter" style="background-color: #8b2323;">
-                            <p class="quarterP">dedicated to their craft.</p>
-                        </div>
-                    </div>
+            
+            <div class="quarters-container">
+                <div class="quarter">
+                  <p class="quarterP">Creativity and innovation.</p>
                 </div>
-            </div>
+                <div class="quarter">
+                  <p class="quarterP">Unites listeners</p>
+                </div>
+                <div class="quarter">
+                  <p class="quarterP">Evolve and grow.</p>
+                </div>
+                <div class="quarter">
+                  <p class="quarterP">Dedicated to their craft.</p>
+                </div>
+              </div>
         </div>
     </section>
 

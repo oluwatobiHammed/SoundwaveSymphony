@@ -66,7 +66,8 @@ $('#date').attr('min', today);
  * @param {Event} event - The form submission event
  * @returns {boolean} - Returns false to prevent the default form submission
  */
-$(".booking-form").submit(function (event) {
+$(document).ready(function() {
+$("#booking-form").submit(function (event) {
     event.preventDefault();
     console.log('Got Here...');
     // Get form values
@@ -113,7 +114,8 @@ $(".booking-form").submit(function (event) {
             "Message: " + message + ".\n\n" +
             "We will get back to you soon."
     }).then(function (response) {
-        console.log('SUCCESS!', response.status, response.text);
+
+        
         $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
         $("#name").val('');
         $("#email").val('');
@@ -131,6 +133,8 @@ $(".booking-form").submit(function (event) {
     return false; // Prevent the default form submission
 });
 
+
+});
 /**
  * Email validation
  * @param {string} email - The email address to validate
@@ -170,13 +174,25 @@ document.addEventListener("DOMContentLoaded", function () {
     $(".collapsible").collapsible();
     $(".tooltipped").tooltip();
     $("select").formSelect();
-    $(".datepicker").datepicker({
-        format: "dd mmmm, yyyy",
-        yearRange: 3,
-        showClearBtn: true,
-        i18n: {
-            done: "Select"
+    var elems = document.querySelectorAll('.datepicker');
+    var instances = M.Datepicker.init(elems, {
+      format: "dd mmmm, yyyy",
+      yearRange: 3,
+      showClearBtn: true,
+      i18n: {
+        done: "Select"
+      },
+      onOpen: function() {
+        var datepicker = document.querySelector('.datepicker-modal');
+        if (datepicker) {
+          datepicker.classList.add('custom-datepicker-dropdown');
         }
+
+        var modaldatepicker = document.querySelector('.datepicker-modal');
+        if (modaldatepicker) {
+            modaldatepicker.style.marginTop = '50px'; /* Adjust this value to your needs */
+        }
+      }
     });
 
     validateMaterializeSelect();

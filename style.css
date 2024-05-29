@@ -218,21 +218,18 @@ footer p {
 /* Define background colors for each column */
 .quarters-container {
     margin-top: 0px; /* Add margin bottom */
-    margin-left: 25px; /* Add margin bottom */
+    margin-left: 12%; /* Add margin bottom */
     padding: 20px; /* Add padding for spacing */
     padding-top: 0;
-
-}
-
-
-.quarters-container .col-sm-6 {
-    padding: 10px; /* Add padding for spacing between quarters */
-}
-
-
-.quarters-container {
     margin-top: 20px; /* Add margin to separate from the about-content */
+    padding: 10px; /* Add padding for spacing between quarters */
+    justify-content: center;
+    align-items: center;
+
 }
+
+
+
 
 .quarter {
     height: 100px; /* Set height for each quarter */
@@ -389,52 +386,7 @@ footer p {
     text-align: center; /* Center the content */
 }
 
-.booking-form {
-    border: 2px solid #333; /* Add border */
-    border-radius: 5px; /* Add border radius */
-    padding: 20px; /* Add padding */
-    max-width: 500px; /* Set maximum width for the form */
-    margin: 0 auto; /* Center the form */
-}
 
-.booking-form label {
-    display: block; /* Display labels as block elements */
-    margin-bottom: 10px; /* Add margin bottom */
-}
-
-.booking-form label,
-.booking-form input,
-.booking-form textarea,
-.booking-form input[type="submit"] {
-    display: block; /* Display elements as blocks */
-    width: 100%; /* Full width */
-    margin-bottom: 4px; /* Add margin at the bottom */
-}
-
-.booking-form input[type="text"],
-.booking-form input[type="email"],
-.booking-form input[type="date"],
-.booking-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px; /* Add margin bottom */
-    border: 1px solid #ccc; /* Add border */
-    border-radius: 5px; /* Add border radius */
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
-}
-
-.booking-form input[type="submit"] {
-    background-color: #333; /* Dark background color */
-    color: #fff; /* Light text color */
-    border: none;
-    padding: 10px 20px; /* Add padding */
-    border-radius: 5px; /* Add border radius */
-    cursor: pointer;
-}
-
-.booking-form input[type="submit"]:hover {
-    background-color: #555; /* Darker background color on hover */
-}
 
 .required-notice {
     color: #f00;
@@ -443,12 +395,6 @@ footer p {
     display: none;
 }
 
-/* Adjust styles for smaller screens */
-@media (max-width: 768px) {
-    .booking-form {
-        max-width: 80%; /* Reduce maximum width for smaller screens */
-    }
-}
 
 
 /* Merchandise Section */
@@ -603,6 +549,10 @@ footer p {
     .social-media li {
         margin: 0 5px; /* Reduce margin between icons */
     }
+
+    .quarters-container {
+        margin-left: 6%; /* Add margin bottom */
+    }
 }
 
 @media (max-width: 576px) {
@@ -611,6 +561,16 @@ footer p {
     }
 
 }
+
+@media (max-width: 1024px) {
+    
+    .quarters-container {
+        margin-left: 10%; /* Add margin bottom */
+    }
+
+}
+
+
 
 
 /* Styling for custom alert messages */
@@ -662,4 +622,11 @@ footer p {
 
 }
 
+
+.custom-datepicker-dropdown {
+    margin-top: 15px !important; /* Adjust the value as needed */
+  }
+  .datepicker-modal {
+  margin-top: 60px !important; /* Adjust this value to your needs */
+}
 
