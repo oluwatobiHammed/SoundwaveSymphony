@@ -885,5 +885,9 @@ footer p {
         /* Remove transition property */
     }
 
-
 }
+
+    /* Custom background color for date picker header */
+    .datepicker-date-display {
+        background-color: #403b3b; /* Set your desired background color */
+    }
