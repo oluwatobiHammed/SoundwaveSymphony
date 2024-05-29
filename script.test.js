@@ -34,7 +34,7 @@ describe("validateMaterializeSelect", () => {
     // Check if the input has the invalid class
     expect($(".select-wrapper input.select-dropdown").css("border-bottom")).toBe("1px solid rgb(244, 67, 54)");
   });
-});describe("Smooth scrolling for navigation links", () => {
+}); describe("Smooth scrolling for navigation links", () => {
   beforeEach(() => {
     // Set up the HTML structure for testing
     document.body.innerHTML = `
@@ -375,7 +375,7 @@ describe("Validation of Materialize select element", () => {
     // Check if the input has the invalid class
     expect(input.classList.contains("invalid")).toBe(true);
   });
-});describe("Smooth scrolling for navigation links", () => {
+}); describe("Smooth scrolling for navigation links", () => {
   beforeEach(() => {
     // Set up the HTML structure for testing
     document.body.innerHTML = `

@@ -121,8 +121,10 @@ body {
 ## Technologies Used
 - HTML
 - CSS
-- Bootstrap
+- Jest (for testing)
+- JavaScript
 - Font Awesome
+- Materialize
 
 ## How to Use
 1. Clone this repository to your local machine.
@@ -160,6 +162,40 @@ Contributions to improve the website or fix any issues are welcome. Please submi
  
 
 ## Testing 
+
+Testing is a crucial aspect of web application development to ensure its functionality, performance, and user experience meet the desired standards. Here are some possible testing approaches that i have been carried out for the Soundwave Symphony web application:
+
+**Functional Testing:**
+- Test all links and navigation elements to ensure they lead to the correct pages and sections.
+- Validate form submissions to ensure data is processed correctly and error handling is in place for invalid inputs.
+- Check interactive elements such as buttons, dropdowns, and sliders for proper functionality.
+- Verify that media elements such as images, videos, and audio files load and play correctly.
+
+**Compatibility Testing:**
+- Test the website on different web browsers (Chrome, Firefox, Safari, Edge) to ensure compatibility.
+- Verify the website's responsiveness and layout on various devices (desktops, laptops, tablets, smartphones) and screen sizes.
+- Check for compatibility with different operating systems (Windows, macOS, Linux, iOS, Android).
+
+**Performance Testing:**
+- Measure the website's loading speed using tools like Google PageSpeed Insights or GTmetrix.
+- Test the website's performance under different network conditions (3G, 4G, WiFi) to ensure fast loading times.
+- Identify and optimize any resource-intensive elements that may affect performance.
+
+**Usability Testing:**
+- Conduct user testing sessions to gather feedback on the website's usability, navigation, and overall user experience.
+- Evaluate the clarity of content, readability of text, and effectiveness of visual elements such as colors and typography.
+- Identify any pain points or usability issues encountered by users and address them accordingly.
+
+**Accessibility Testing:**
+- Evaluate the website's accessibility compliance with standards such as WCAG (Web Content Accessibility Guidelines).
+- Test the website using screen readers and assistive technologies to ensure it is accessible to users with disabilities.
+- Address any accessibility issues such as missing alt text for images or keyboard navigation problems.
+
+**Regression Testing:**
+- Perform regression testing after making changes or updates to the website to ensure that existing features still work as expected.
+- Automate regression tests where possible to streamline the testing process and catch any regressions early.
+
+
 
 ### Validator Testing 
 

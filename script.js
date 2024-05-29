@@ -66,72 +66,72 @@ $('#date').attr('min', today);
  * @param {Event} event - The form submission event
  * @returns {boolean} - Returns false to prevent the default form submission
  */
-$(document).ready(function() {
-$("#booking-form").submit(function (event) {
-    event.preventDefault();
-    console.log('Got Here...');
-    // Get form values
-    var name = $("#name").val().trim();
-    var email = $("#email").val().trim();
-    var eventType = $("#event-type").val().trim();
-    var date = $("#date").val();
-    var message = $("#message").val().trim();
+$(document).ready(function () {
+    $("#booking-form").submit(function (event) {
+        event.preventDefault();
+        console.log('Got Here...');
+        // Get form values
+        var name = $("#name").val().trim();
+        var email = $("#email").val().trim();
+        var eventType = $("#event-type").val().trim();
+        var date = $("#date").val();
+        var message = $("#message").val().trim();
 
-    // Check if all fields are filled
-    if (name === '' || email === '' || date === '' || message === '') {
-        $('#alert').removeClass('success').addClass('error').html('Please fill all the required fields.').fadeIn();
-        setTimeout(function () { $('#alert').fadeOut() }, 4000);
-        return false;
-    }
+        // Check if all fields are filled
+        if (name === '' || email === '' || date === '' || message === '') {
+            $('#alert').removeClass('success').addClass('error').html('Please fill all the required fields.').fadeIn();
+            setTimeout(function () { $('#alert').fadeOut() }, 4000);
+            return false;
+        }
 
-    // Check if the selected date is in the future
-    var currentDate = new Date();
-    var selectedDate = new Date(date + 'T00:00:00'); // Reset time to 00:00:00 to avoid timezone issues
-    if (selectedDate <= currentDate) {
-        $('#alert').removeClass('success').addClass('error').html('Please select a future date.').fadeIn();
-        setTimeout(function () { $('#alert').fadeOut() }, 4000);
-        return false;
-    }
+        // Check if the selected date is in the future
+        var currentDate = new Date();
+        var selectedDate = new Date(date + 'T00:00:00'); // Reset time to 00:00:00 to avoid timezone issues
+        if (selectedDate <= currentDate) {
+            $('#alert').removeClass('success').addClass('error').html('Please select a future date.').fadeIn();
+            setTimeout(function () { $('#alert').fadeOut() }, 4000);
+            return false;
+        }
 
-    // Check if the email address is valid
-    if (!isValidEmail(email)) {
-        $('#alert').removeClass('success').addClass('error').html('Please enter a valid email address.').fadeIn();
-        setTimeout(function () { $('#alert').fadeOut() }, 4000);
-        return false;
-    }
+        // Check if the email address is valid
+        if (!isValidEmail(email)) {
+            $('#alert').removeClass('success').addClass('error').html('Please enter a valid email address.').fadeIn();
+            setTimeout(function () { $('#alert').fadeOut() }, 4000);
+            return false;
+        }
 
-    emailjs.init("Qur9J272yrutlMj77");
+        emailjs.init("Qur9J272yrutlMj77");
 
-    emailjs.send("service_zeodffs", "template_s6rjjmy", {
-        sendername: "Soundwave Symphony",
-        to: this.email.value,
-        subject: "New Booking Request",
-        message: "Thank you for booking a project with us. We appreciate your interest in working with us. \n\nYour details are as follows:\n\n" +
-            "Name: " + name + "\n" +
-            "Email: " + email + "\n" +
-            "Event Type: " + eventType + "\n" +
-            "Date: " + date + "\n" +
-            "Message: " + message + ".\n\n" +
-            "We will get back to you soon."
-    }).then(function (response) {
+        emailjs.send("service_zeodffs", "template_s6rjjmy", {
+            sendername: "Soundwave Symphony",
+            to: this.email.value,
+            subject: "New Booking Request",
+            message: "Thank you for booking a project with us. We appreciate your interest in working with us. \n\nYour details are as follows:\n\n" +
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Event Type: " + eventType + "\n" +
+                "Date: " + date + "\n" +
+                "Message: " + message + ".\n\n" +
+                "We will get back to you soon."
+        }).then(function (response) {
 
 
-        $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
-        $("#name").val('');
-        $("#email").val('');
-        $("#event-type").val('');
-        $("#date").val('');
-        $("#message").val('');
-        setTimeout(function () { $('#alert').fadeOut() }, 4000);
-        // Clear the form
-    }, function (error) {
-        console.log('FAILED...', error);
-        $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
-        setTimeout(function () { $('#alert').fadeOut() }, 4000);
+            $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
+            $("#name").val('');
+            $("#email").val('');
+            $("#event-type").val('');
+            $("#date").val('');
+            $("#message").val('');
+            setTimeout(function () { $('#alert').fadeOut() }, 4000);
+            // Clear the form
+        }, function (error) {
+            console.log('FAILED...', error);
+            $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
+            setTimeout(function () { $('#alert').fadeOut() }, 4000);
+        });
+
+        return false; // Prevent the default form submission
     });
-
-    return false; // Prevent the default form submission
-});
 
 
 });
@@ -175,25 +175,25 @@ document.addEventListener("DOMContentLoaded", function () {
     $("select").formSelect();
     var elems = document.querySelectorAll('.datepicker');
     var instances = M.Datepicker.init(elems, {
-      format: "dd mmmm, yyyy",
-      yearRange: 3,
-      showClearBtn: true,
-      i18n: {
-        done: "Select"
-      },
-      onOpen: function() {
-        var datepicker = document.querySelector('.datepicker-modal');
-        if (datepicker) {
-          datepicker.classList.add('custom-datepicker-dropdown');
+        format: "dd mmmm, yyyy",
+        yearRange: 3,
+        showClearBtn: true,
+        i18n: {
+            done: "Select"
+        },
+        onOpen: function () {
+            var datepicker = document.querySelector('.datepicker-modal');
+            if (datepicker) {
+                datepicker.classList.add('custom-datepicker-dropdown');
+            }
+
+            var modaldatepicker = document.querySelector('.datepicker-modal');
+            if (modaldatepicker) {
+                modaldatepicker.style.marginTop = '50px'; /* Adjust this value to your needs */
+            }
         }
 
-        var modaldatepicker = document.querySelector('.datepicker-modal');
-        if (modaldatepicker) {
-            modaldatepicker.style.marginTop = '50px'; /* Adjust this value to your needs */
-        }
-      }
 
-      
     });
 
     validateMaterializeSelect();
@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
     // Initialize sidenav when the document is fully loaded
     $('.sidenav').sidenav({
         closeOnClick: true, // Close the sidenav when clicking on a link
@@ -238,11 +238,11 @@ $(document).ready(function(){
         edge: 'right'     // Choose the horizontal origin for the drawer (right or left)
     });
 
-       // Close sidenav when a link is clicked
-       $('.sidenav-close-link').on('click', function() {
+    // Close sidenav when a link is clicked
+    $('.sidenav-close-link').on('click', function () {
         var sidenavInstance = M.Sidenav.getInstance($('#mobile-demo'));
         sidenavInstance.close();
-    }); 
+    });
 });
 
 /**
