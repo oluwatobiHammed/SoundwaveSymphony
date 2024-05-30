@@ -216,3 +216,42 @@ The live link can be found here - https://oluwatobihammed.github.io/SoundwaveSym
  
 
 <!-- Add more image references as needed -->
+
+### Development life Cycle:
+
+**Planning and Requirement Analysis:**
+
+- Define the objectives and scope of the project.
+- Gather requirements.
+- Create a project plan and timeline.
+
+**Design:**
+
+- Design the layout and structure of the website.
+- Create wireframes and mockups to visualize the user interface.
+- Define the navigation flow and user experience.
+
+**Development:**
+
+- Write HTML, CSS, and JavaScript code to build the website.
+- Implement responsive design to ensure compatibility with different devices and screen sizes.
+- Optimize images and other media files for web performance.
+
+**Testing:**
+
+- Perform functional testing to ensure all links, buttons, and forms work correctly.
+- Test the website on different browsers and devices to check for compatibility issues.
+- Conduct usability testing to gather feedback on the user experience.
+
+**Deployment:**
+
+- Choose a web hosting provider and set up a hosting environment.
+- Upload the website files to the server using FTP or other deployment tools.
+- Configure domain settings and DNS records if necessary.
+- Test the live website to ensure it is functioning correctly.
+
+**Maintenance and Updates:**
+
+- Monitor website performance and security regularly.
+- Perform regular backups of the website files and database.
+- Implement updates and improvements based on user feedback and changing requirements.
