@@ -34,7 +34,8 @@ The Shows section displays information about upcoming performances by Soundwave 
 ## Booking
 The Booking section offers information for individuals or organizations interested in booking Soundwave Symphony for events. It includes a booking inquiry form where users can provide event details and request availability and pricing.
 
-<img width="1680" alt="Screenshot 2024-04-05 at 17 34 04" src="https://github.com/oluwatobiHammed/SoundwaveSymphony/assets/50711478/86fbb626-d271-409d-87fe-12d354f7d019">
+<img width="1680" alt="Screenshot 2024-05-29 at 20 07 43" src="https://github.com/oluwatobiHammed/SoundwaveSymphony/assets/50711478/2bee32f2-72ab-4787-86d8-e978b540b7c2">
+
 
 ## Merchandise
 The Merchandise section features a selection of stylish merchandise items available for purchase to support Soundwave Symphony. It displays images, descriptions, and prices of merchandise items, along with a button to add items to the cart.
