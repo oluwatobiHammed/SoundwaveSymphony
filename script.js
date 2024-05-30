@@ -193,8 +193,23 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
+        
 
     });
+
+             // Initialize Materialize Select
+             var elems = document.querySelectorAll('select');
+             var instances = M.FormSelect.init(elems, {});
+ 
+             // Prevent duplicate initialization
+             for (var i = 0; i < instances.length; i++) {
+                 if (!instances[i].classList.contains('initialized')) {
+                     instances[i].classList.add('initialized');
+                 }
+             }
+
+             
+             
 
     validateMaterializeSelect();
 

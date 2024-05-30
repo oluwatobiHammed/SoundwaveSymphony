@@ -892,3 +892,25 @@ footer p {
     background-color: #403b3b;
     /* Set your desired background color */
 }
+
+/* Custom CSS to ensure the date text on the date picker popup remains white */
+.datepicker-date-display .datepicker-date-display-wrapper,
+.datepicker-table td.is-selected {
+    color: white !important;
+}
+
+/* Override input label color when active */
+.input-field input[type=text]:focus+label {
+    color: black !important;
+}
+
+/* Override the input underline color when active */
+.input-field input[type=text]:focus {
+    border-bottom: 1px solid black !important;
+    box-shadow: 0 1px 0 0 black !important;
+}
+
+.datepicker {
+    color: black !important;
+}
+
