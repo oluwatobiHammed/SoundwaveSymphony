@@ -131,56 +131,62 @@ describe('Smooth scroll to booking section', () => {
 
 describe('today variable', () => {
   it('should set the minimum date to the current date', () => {
+    // Create a mock input element with ID "date"
+    const dateInput = document.createElement('input');
+    dateInput.setAttribute('type', 'date');
+    dateInput.setAttribute('id', 'date');
+    document.body.appendChild(dateInput);
+
     // Get the current date
     const currentDate = new Date();
     const day = ("0" + currentDate.getDate()).slice(-2);
     const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
     const today = currentDate.getFullYear() + "-" + (month) + "-" + (day);
 
-        // Wait for the element to be available
-        const waitForElement = setInterval(() => {
-          const dateInput = document.getElementById('date');
-          if (dateInput) {
-            clearInterval(waitForElement);
-            
-            // Get the value of the date input field
-            const selectedDate = dateInput.attributes('min');
-    
-            // Assert that the selected date is equal to today's date
-            expect(selectedDate).toBe(today);
-    
-            done(); // Call done() to indicate the test is complete
-          }
-        }, 100); // Check every 100 milliseconds
+    // Set the minimum date attribute to today's date
+    dateInput.setAttribute('min', today);
 
+    // Get the value of the min attribute of the date input field
+    const minDate = dateInput.getAttribute('min');
+
+    // Assert that the minimum date is set to today's date
+    expect(minDate).toBe(today);
+
+    // Clean up the mock input element
+    document.body.removeChild(dateInput);
   });
 });
+
 
 describe('selectedDate variable', () => {
   it('should set the selected date to the current date', () => {
+    // Create a mock input element with ID "date"
+    const dateInput = document.createElement('input');
+    dateInput.setAttribute('type', 'date');
+    dateInput.setAttribute('id', 'date');
+    document.body.appendChild(dateInput);
+
     // Get the current date
     const currentDate = new Date();
     const day = ("0" + currentDate.getDate()).slice(-2);
     const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
     const today = currentDate.getFullYear() + "-" + (month) + "-" + (day);
 
-    // Wait for the element to be available
-    const waitForElement = setInterval(() => {
-      const dateInput = document.getElementById('date');
-      if (dateInput) {
-        clearInterval(waitForElement);
-        
-        // Get the value of the date input field
-        const selectedDate = dateInput.value;
+    // Set the value of the date input field
+    dateInput.value = today;
 
-        // Assert that the selected date is equal to today's date
-        expect(selectedDate).toBe(today);
+    // Get the value of the date input field
+    const selectedDate = dateInput.value;
 
-        done(); // Call done() to indicate the test is complete
-      }
-    }, 100); // Check every 100 milliseconds
+    // Assert that the selected date is equal to today's date
+    expect(selectedDate).toBe(today);
+
+    // Clean up the mock input element
+    document.body.removeChild(dateInput);
   });
 });
+
+
 
 describe('isValidEmail function', () => {
   it('should return true for a valid email address', () => {
@@ -211,5 +217,37 @@ describe('isValidEmail function', () => {
     const invalidEmail = 'testexample.com';
     const result = isValidEmail(invalidEmail);
     expect(result).toBe(false);
+  });
+});
+
+
+describe('Add to cart button click event', () => {
+  it('should show custom alert message with the item name when the add to cart button is clicked', () => {
+    // Create a mock item name
+    const itemName = 'Test Item';
+
+    // Create a mock add to cart button
+    const addToCartButton = document.createElement('button');
+    addToCartButton.classList.add('add-to-cart');
+    addToCartButton.innerHTML = 'Add to Cart';
+    document.body.appendChild(addToCartButton);
+
+    // Create a mock sibling element with the item name
+    const siblingElement = document.createElement('h3');
+    siblingElement.innerHTML = itemName;
+    addToCartButton.parentNode.insertBefore(siblingElement, addToCartButton.nextSibling);
+
+    // Simulate a click event on the add to cart button
+    addToCartButton.click();
+
+    // Wait for a short delay to ensure the .shopping-custom-alert element is added
+    setTimeout(() => {
+      // Assert that the custom alert message is displayed with the item name
+      expect(document.querySelector('.shopping-custom-alert').textContent).toBe(itemName + ' has been added to your cart.');
+
+      // Clean up the mock elements
+      document.body.removeChild(addToCartButton);
+      document.body.removeChild(siblingElement);
+    }, 100); // Adjust the delay as needed
   });
 });

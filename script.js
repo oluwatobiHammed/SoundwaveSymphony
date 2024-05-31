@@ -154,18 +154,23 @@ function isValidEmail(email) {
 }
 
 // Export the isValidEmail function
-module.exports = isValidEmail;
+// Export the function only if in a Node.js environment
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = isValidEmail;
+}
 
 /**
  * Add to cart button click event
  */
-$(".add-to-cart").on("click",function () {
-    let itemName = $(this).siblings("h3").text();
-    showCustomAlert(itemName + " has been added to your cart.");
-    // Here you can also add code to actually add the item to a shopping cart
-    // For example, updating a cart count, or sending an AJAX request to a server
+$(($) => {
+    $(document).on("click", ".add-to-cart", function () {
+        // Get the item name relative to the clicked button
+        let itemName = $(this).siblings("h3").text();
+        // Call the showCustomAlert function with the item name
+        showCustomAlert(itemName + " has been added to your cart.");
+        // Additional code to handle adding the item to the cart
+    });
 });
-
 /**
  * Show custom alert message
  * @param {string} message - The message to display in the alert
