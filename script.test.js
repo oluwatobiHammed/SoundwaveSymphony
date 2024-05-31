@@ -1,5 +1,7 @@
 const { isValidEmail } = require('./script');
-const $ = require('jquery');
+import $ from 'jquery';
+
+
 // Import the script that contains the jQuery code
 require('./script.js');
 
@@ -54,37 +56,6 @@ describe('Smooth scrolling for navigation links', () => {
   });
 });
 
-// describe('Navbar collapse toggle effect', () => {
-//   it('should toggle the show class on navbar-collapse when navbar-toggler is clicked', () => {
-//     // Create a mock navbar-toggler element
-//     const navbarToggler = document.createElement('div');
-//     navbarToggler.classList.add('navbar-toggler');
-//     document.body.appendChild(navbarToggler);
-
-//     // Create a mock navbar-collapse element
-//     const navbarCollapse = document.createElement('div');
-//     navbarCollapse.classList.add('navbar-collapse');
-//     document.body.appendChild(navbarCollapse);
-
-//     // Simulate a click event on the navbar-toggler
-//     navbarToggler.click();
-//     navbarCollapse.classList.remove('show');
-
-//     // Assert that the navbar-collapse has the show class
-//     expect(navbarCollapse.classList.contains('show')).toBe(true);
-    
-
-//     // Simulate another click event on the navbar-toggler
-//     navbarToggler.click();
-
-//     // Assert that the navbar-collapse does not have the show class
-//     expect(navbarCollapse.classList.contains('show')).toBe(false);
-
-//     // Clean up the mock elements
-//     document.body.removeChild(navbarToggler);
-//     document.body.removeChild(navbarCollapse);
-//   });
-// });
 
 describe('Close navbar when a link is clicked', () => {
   it('should remove the show class from navbar-collapse when a link is clicked', () => {
@@ -155,5 +126,58 @@ describe('Smooth scroll to booking section', () => {
     // Clean up the mock elements
     document.body.removeChild(bookingElement);
     document.body.removeChild(link);
+  });
+});
+
+describe('today variable', () => {
+  it('should set the minimum date to the current date', () => {
+    // Get the current date
+    const currentDate = new Date();
+    const day = ("0" + currentDate.getDate()).slice(-2);
+    const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+    const today = currentDate.getFullYear() + "-" + (month) + "-" + (day);
+
+        // Wait for the element to be available
+        const waitForElement = setInterval(() => {
+          const dateInput = document.getElementById('date');
+          if (dateInput) {
+            clearInterval(waitForElement);
+            
+            // Get the value of the date input field
+            const selectedDate = dateInput.attributes('min');
+    
+            // Assert that the selected date is equal to today's date
+            expect(selectedDate).toBe(today);
+    
+            done(); // Call done() to indicate the test is complete
+          }
+        }, 100); // Check every 100 milliseconds
+
+  });
+});
+
+describe('selectedDate variable', () => {
+  it('should set the selected date to the current date', () => {
+    // Get the current date
+    const currentDate = new Date();
+    const day = ("0" + currentDate.getDate()).slice(-2);
+    const month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
+    const today = currentDate.getFullYear() + "-" + (month) + "-" + (day);
+
+    // Wait for the element to be available
+    const waitForElement = setInterval(() => {
+      const dateInput = document.getElementById('date');
+      if (dateInput) {
+        clearInterval(waitForElement);
+        
+        // Get the value of the date input field
+        const selectedDate = dateInput.value;
+
+        // Assert that the selected date is equal to today's date
+        expect(selectedDate).toBe(today);
+
+        done(); // Call done() to indicate the test is complete
+      }
+    }, 100); // Check every 100 milliseconds
   });
 });

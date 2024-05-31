@@ -124,7 +124,6 @@ $('#date').attr('min', today);
                 "We will get back to you soon."
         }).then(function (response) {
 
-
             $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
             $("#name").val('');
             $("#email").val('');
@@ -134,7 +133,7 @@ $('#date').attr('min', today);
             setTimeout(function () { $('#alert').fadeOut() }, 4000);
             // Clear the form
         }, function (error) {
-            console.log('FAILED...', error);
+
             $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
             setTimeout(function () { $('#alert').fadeOut() }, 4000);
         });
@@ -202,27 +201,24 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-        
+
 
     });
 
-             // Initialize Materialize Select
-             var elems = document.querySelectorAll('select');
-             var instances = M.FormSelect.init(elems, {});
- 
-             // Prevent duplicate initialization
-             for (var i = 0; i < instances.length; i++) {
-                 if (!instances[i].classList.contains('initialized')) {
-                     instances[i].classList.add('initialized');
-                 }
-             }
+    // Initialize Materialize Select
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, {});
 
-             
-             
+    // Prevent duplicate initialization
+    for (var i = 0; i < instances.length; i++) {
+        if (!instances[i].classList.contains('initialized')) {
+            instances[i].classList.add('initialized');
+        }
+    }
 
     validateMaterializeSelect();
 
- 
+
 });
 
    /**
