@@ -153,6 +153,9 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
+// Export the isValidEmail function
+module.exports = isValidEmail;
+
 /**
  * Add to cart button click event
  */

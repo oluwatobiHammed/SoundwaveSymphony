@@ -1,4 +1,4 @@
-const { isValidEmail } = require('./script');
+const isValidEmail  = require('./script');
 import $ from 'jquery';
 
 
@@ -179,5 +179,37 @@ describe('selectedDate variable', () => {
         done(); // Call done() to indicate the test is complete
       }
     }, 100); // Check every 100 milliseconds
+  });
+});
+
+describe('isValidEmail function', () => {
+  it('should return true for a valid email address', () => {
+    const validEmail = 'test@example.com';
+    const result = isValidEmail(validEmail);
+    expect(result).toBe(true);
+  });
+
+  it('should return false for an email address without a domain', () => {
+    const invalidEmail = 'test@';
+    const result = isValidEmail(invalidEmail);
+    expect(result).toBe(false);
+  });
+
+  it('should return false for an email address without a username', () => {
+    const invalidEmail = '@example.com';
+    const result = isValidEmail(invalidEmail);
+    expect(result).toBe(false);
+  });
+
+  it('should return false for an email address with an invalid domain', () => {
+    const invalidEmail = 'test@example';
+    const result = isValidEmail(invalidEmail);
+    expect(result).toBe(false);
+  });
+
+  it('should return false for an email address with an invalid format', () => {
+    const invalidEmail = 'testexample.com';
+    const result = isValidEmail(invalidEmail);
+    expect(result).toBe(false);
   });
 });
