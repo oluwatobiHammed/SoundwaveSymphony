@@ -4,39 +4,45 @@
  * Smooth scrolling for navigation links
  * @param {Event} event - The click event
  */
-$('.navbar-nav a').on('click', function (event) {
-    if (this.hash !== '') {
-        event.preventDefault();
-        const hash = this.hash;
-        $('html, body').animate({
-            scrollTop: $(hash).offset().top
-        }, 800, function () {
-            window.location.hash = hash;
-        });
-    }
-});
+document.addEventListener("DOMContentLoaded", function () {
+    $('.navbar-nav a').on('click', function (event) {
+        if (this.hash !== '') {
+            event.preventDefault();
+            const hash = this.hash;
+            $('html, body').animate({
+                scrollTop: $(hash).offset().top
+            }, 800, function () {
+                window.location.hash = hash;
+            });
+        }
+    });
 
-/**
+    /**
  * Navbar collapse toggle effect
  * @param {Event} event - The click event
  */
-$('.navbar-toggler').on('click', function () {
-    $('.navbar-collapse').toggleClass('show');
+    $('.navbar-toggler').on('click', function () {
+        $('.navbar-collapse').toggleClass('show');
+    });
+
+    /**
+     * Close navbar when a link is clicked
+     * @param {Event} event - The click event
+     */
+    $('.navbar-nav a').on('click', function () {
+        $('.navbar-collapse').removeClass('show');
+    });
+
 });
 
-/**
- * Close navbar when a link is clicked
- * @param {Event} event - The click event
- */
-$('.navbar-nav a').on('click', function () {
-    $('.navbar-collapse').removeClass('show');
-});
+
+
 
 /**
  * Scale effect on hover
  * @param {Event} event - The hover event
  */
-$(".quarter").hover(function () {
+$(".quarter").on("mouseleave",function () {
     $(this).css("transform", "scale(1.2)");
 }, function () {
     $(this).css("transform", "scale(1)");
@@ -46,13 +52,22 @@ $(".quarter").hover(function () {
  * Smooth scroll to booking section
  * @param {Event} event - The click event
  */
-$(".smooth-scroll").click(function () {
+$(".smooth-scroll").on('click',function () {
     $('html, body').animate({
         scrollTop: $("#booking").offset().top
     }, 800);
 });
 
+
+
 /**
+ * Form submission handling
+ * @param {Event} event - The form submission event
+ * @returns {boolean} - Returns false to prevent the default form submission
+ */
+document.addEventListener("DOMContentLoaded", function() {
+
+    /**
  * Set the minimum date to the current date
  */
 var currentDate = new Date();
@@ -61,12 +76,6 @@ var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
 var today = currentDate.getFullYear() + "-" + (month) + "-" + (day);
 $('#date').attr('min', today);
 
-/**
- * Form submission handling
- * @param {Event} event - The form submission event
- * @returns {boolean} - Returns false to prevent the default form submission
- */
-$(document).ready(function () {
     $("#booking-form").submit(function (event) {
         event.preventDefault();
         console.log('Got Here...');
@@ -148,7 +157,7 @@ function isValidEmail(email) {
 /**
  * Add to cart button click event
  */
-$(".add-to-cart").click(function () {
+$(".add-to-cart").on("click",function () {
     let itemName = $(this).siblings("h3").text();
     showCustomAlert(itemName + " has been added to your cart.");
     // Here you can also add code to actually add the item to a shopping cart
@@ -213,38 +222,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
     validateMaterializeSelect();
 
-    /**
-     * Validates the Materialize select element.
-     */
-    function validateMaterializeSelect() {
-        let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
-        let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
-        if ($("select.validate").prop("required")) {
-            $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
-        }
-        $(".select-wrapper input.select-dropdown").on("focusin", function () {
-            $(this).parent(".select-wrapper").on("change", function () {
-                if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
-                    $(this).children("input").css(classValid);
-                }
-            });
-        }).on("click", function () {
-            if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(0, 0, 0, 0.03)") {
-                $(this).parent(".select-wrapper").children("input").css(classValid);
-            } else {
-                $(".select-wrapper input.select-dropdown").on("focusout", function () {
-                    if ($(this).parent(".select-wrapper").children("select").prop("required")) {
-                        if ($(this).css("border-bottom") != "1px solid rgb(76, 175, 80)") {
-                            $(this).parent(".select-wrapper").children("input").css(classInvalid);
-                        }
-                    }
-                });
-            }
-        });
-    }
+ 
 });
 
-$(document).ready(function () {
+   /**
+     * Validates the Materialize select element.
+     */
+   function validateMaterializeSelect() {
+    let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
+    let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
+    if ($("select.validate").prop("required")) {
+        $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
+    }
+    $(".select-wrapper input.select-dropdown").on("focusin", function () {
+        $(this).parent(".select-wrapper").on("change", function () {
+            if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
+                $(this).children("input").css(classValid);
+            }
+        });
+    }).on("click", function () {
+        if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(0, 0, 0, 0.03)") {
+            $(this).parent(".select-wrapper").children("input").css(classValid);
+        } else {
+            $(".select-wrapper input.select-dropdown").on("focusout", function () {
+                if ($(this).parent(".select-wrapper").children("select").prop("required")) {
+                    if ($(this).css("border-bottom") != "1px solid rgb(76, 175, 80)") {
+                        $(this).parent(".select-wrapper").children("input").css(classInvalid);
+                    }
+                }
+            });
+        }
+    });
+}
+
+document.addEventListener("DOMContentLoaded", function () {
     // Initialize sidenav when the document is fully loaded
     $('.sidenav').sidenav({
         closeOnClick: true, // Close the sidenav when clicking on a link

@@ -1,9 +1,12 @@
 {
   "devDependencies": {
     "@babel/preset-env": "^7.24.6",
+    "@testing-library/jest-dom": "^6.4.5",
+    "@testing-library/react": "^15.0.7",
     "babel-jest": "^29.7.0",
     "jest": "^26.6.3",
-    "jest-environment-jsdom-global": "^4.0.0"
+    "jest-environment-jsdom-global": "^4.0.0",
+    "jquery": "^3.7.1"
   },
   "name": "jest",
   "description": "This repository contains the code for the Soundwave Symphony website, a dynamic and versatile band hailing from the vibrant music scene of Lagos, Nigeria. The website showcases information about the band, their music, upcoming shows, booking inquiries, merchandise, and contact details.",
