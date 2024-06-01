@@ -115,7 +115,8 @@ $('#date').attr('min', today);
             sendername: "Soundwave Symphony",
             to: this.email.value,
             subject: "New Booking Request",
-            message: "Thank you for booking a project with us. We appreciate your interest in working with us. \n\nYour details are as follows:\n\n" +
+            message: "Thank you for booking a project with us. We appreciate your interest in working with us." +
+                "\n\nYour details are as follows:\n\n" +
                 "Name: " + name + "\n" +
                 "Email: " + email + "\n" +
                 "Event Type: " + eventType + "\n" +
@@ -143,21 +144,7 @@ $('#date').attr('min', today);
 
 
 });
-/**
- * Email validation
- * @param {string} email - The email address to validate
- * @returns {boolean} - Returns true if the email is valid, false otherwise
- */
-function isValidEmail(email) {
-    var emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
-    return emailRegex.test(email);
-}
 
-// Export the isValidEmail function
-// Export the function only if in a Node.js environment
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = isValidEmail;
-}
 
 /**
  * Add to cart button click event
@@ -185,10 +172,12 @@ function showCustomAlert(message) {
 /**
  * Initialize Materialize components on DOMContentLoaded event
  */
-document.addEventListener("DOMContentLoaded", function () {
+$(($) => {
     $(".collapsible").collapsible();
     $(".tooltipped").tooltip();
     $("select").formSelect();
+
+
     var elems = document.querySelectorAll('.datepicker');
     var instances = M.Datepicker.init(elems, {
         format: "dd mmmm, yyyy",
@@ -209,54 +198,92 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
 
-
-
     });
 
+
     // Initialize Materialize Select
-    var elems = document.querySelectorAll('select');
+    elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems, {});
 
     // Prevent duplicate initialization
     for (var i = 0; i < instances.length; i++) {
-        if (!instances[i].classList.contains('initialized')) {
-            instances[i].classList.add('initialized');
+        if (!instances[i].el.classList.contains('initialized')) {
+            instances[i].el.classList.add('initialized');
         }
     }
 
-    validateMaterializeSelect();
 
+    validateMaterializeSelect();
 
 });
 
-   /**
-     * Validates the Materialize select element.
-     */
-   function validateMaterializeSelect() {
-    let classValid = { "border-bottom": "1px solid #4caf50", "box-shadow": "0 1px 0 0 #4caf50" };
-    let classInvalid = { "border-bottom": "1px solid #f44336", "box-shadow": "0 1px 0 0 #f44336" };
+
+/**
+  * Validates the Materialize select element.
+  */
+function validateMaterializeSelect() {
+    let classValid = { 
+        "border-bottom": "1px solid #4caf50",
+         "box-shadow": "0 1px 0 0 #4caf50" 
+        };
+    let classInvalid = { 
+        "border-bottom": "1px solid #f44336",
+         "box-shadow": "0 1px 0 0 #f44336" 
+        };
+
+
     if ($("select.validate").prop("required")) {
-        $("select.validate").css({ "display": "block", "height": "0", "padding": "0", "width": "0", "position": "absolute" });
+        $("select.validate").css({
+            display: "block",
+            height: "0",
+            padding: "0",
+            width: "0",
+            position: "absolute"
+        });
     }
+
+
     $(".select-wrapper input.select-dropdown").on("focusin", function () {
         $(this).parent(".select-wrapper").on("change", function () {
-            if ($(this).children("ul").children("li.selected:not(.disabled)").on("click", function () { })) {
-                $(this).children("input").css(classValid);
+            if ($(this).children("ul").children("li.selected:not(.disabled)").length > 0) {
+                $(this).children("input").css(classValid).addClass("valid");
             }
         });
-    }).on("click", function () {
-        if ($(this).parent(".select-wrapper").children("ul").children("li.selected:not(.disabled)").css("background-color") === "rgba(0, 0, 0, 0.03)") {
-            $(this).parent(".select-wrapper").children("input").css(classValid);
+    })
+    $(document).on("click", ".select-wrapper input.select-dropdown", function () {
+        if ($(this).parent(".select-wrapper").children("ul")
+            .children("li.selected:not(.disabled)")
+            .css("background-color") === "rgba(0, 0, 0, 0.03)") {
+            $(this).parent(".select-wrapper").children("input").css(classValid).addClass("valid");
         } else {
             $(".select-wrapper input.select-dropdown").on("focusout", function () {
                 if ($(this).parent(".select-wrapper").children("select").prop("required")) {
                     if ($(this).css("border-bottom") != "1px solid rgb(76, 175, 80)") {
-                        $(this).parent(".select-wrapper").children("input").css(classInvalid);
+                        $(this).parent(".select-wrapper").children("input").css(classInvalid).removeClass("valid");
                     }
                 }
             });
         }
     });
+}
+
+
+/**
+ * Email validation
+ * @param {string} email - The email address to validate
+ * @returns {boolean} - Returns true if the email is valid, false otherwise
+ */
+function isValidEmail(email) {
+    var emailRegex = /^[\w-]+(\.[\w-]+)*@([\w-]+\.)+[a-zA-Z]{2,7}$/;
+    return emailRegex.test(email);
+}
+
+// Export functions for Test environment
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        validateMaterializeSelect,
+        isValidEmail
+    };
 }
 
 document.addEventListener("DOMContentLoaded", function () {

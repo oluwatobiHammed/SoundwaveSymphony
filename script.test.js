@@ -1,6 +1,5 @@
-const isValidEmail  = require('./script');
-import $ from 'jquery';
-
+const { validateMaterializeSelect, isValidEmail } = require('./script');
+import M from 'materialize-css';
 
 // Import the script that contains the jQuery code
 require('./script.js');
@@ -249,5 +248,39 @@ describe('Add to cart button click event', () => {
       document.body.removeChild(addToCartButton);
       document.body.removeChild(siblingElement);
     }, 100); // Adjust the delay as needed
+  });
+});
+
+
+describe('Sidenav instance', () => {
+  it('should close the sidenav when a link is clicked', () => {
+    // Create a mock sidenav element
+    const sidenavElement = document.createElement('ul');
+    sidenavElement.classList.add('sidenav');
+    document.body.appendChild(sidenavElement);
+
+    // Create a mock link element
+    const link = document.createElement('a');
+    link.href = '#';
+    link.classList.add('sidenav-close-link');
+    document.body.appendChild(link);
+
+    // Initialize the sidenav
+    const sidenavInstance = M.Sidenav.init(sidenavElement, {
+      closeOnClick: true,
+      inDuration: 250,
+      outDuration: 200,
+      edge: 'right'
+    });
+
+    // Simulate a click event on the link
+    link.click();
+
+    // Assert that the sidenav is closed
+    expect(sidenavInstance.isOpen).toBe(false);
+
+    // Clean up the mock elements
+    document.body.removeChild(sidenavElement);
+    document.body.removeChild(link);
   });
 });
