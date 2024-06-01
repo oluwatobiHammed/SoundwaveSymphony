@@ -79,8 +79,8 @@ describe('Scale effect on hover', () => {
   });
 });
 
-describe('Smooth scroll to booking section', () => {
-  it('should scroll to the booking section when the smooth-scroll link is clicked', () => {
+describe('Smooth scroll to section', () => {
+  it('should scroll to the section when the smooth-scroll link is clicked', () => {
     // Create a mock booking element
     const bookingElement = document.createElement('div');
     bookingElement.id = 'booking';
@@ -89,7 +89,7 @@ describe('Smooth scroll to booking section', () => {
     // Create a mock smooth-scroll link
     const link = document.createElement('a');
     link.classList.add('smooth-scroll');
-    link.href = '#booking';
+    link.href = '#shows';
     document.body.appendChild(link);
 
     // Simulate a click event on the link

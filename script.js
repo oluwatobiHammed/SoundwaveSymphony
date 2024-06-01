@@ -4,36 +4,38 @@
  * Smooth scrolling for navigation links
  * @param {Event} event - The click event
  */
-document.addEventListener("DOMContentLoaded", function () {
-    $('.navbar-nav a').on('click', function (event) {
-        if (this.hash !== '') {
-            event.preventDefault();
-            const hash = this.hash;
-            $('html, body').animate({
-                scrollTop: $(hash).offset().top
-            }, 800, function () {
-                window.location.hash = hash;
-            });
-        }
-    });
+function smoothScrollingForLinks() {
+    document.addEventListener("DOMContentLoaded", function () {
+        $('.navbar-nav a').on('click', function (event) {
+            if (this.hash !== '') {
+                event.preventDefault();
+                const hash = this.hash;
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+                    window.location.hash = hash;
+                });
+            }
+        });
 
-    /**
- * Navbar collapse toggle effect
- * @param {Event} event - The click event
- */
-    $('.navbar-toggler').on('click', function () {
-        $('.navbar-collapse').toggleClass('show');
-    });
+        /**
+         * Navbar collapse toggle effect
+         * @param {Event} event - The click event
+         */
+        $('.navbar-toggler').on('click', function () {
+            $('.navbar-collapse').toggleClass('show');
+        });
 
-    /**
-     * Close navbar when a link is clicked
-     * @param {Event} event - The click event
-     */
-    $('.navbar-nav a').on('click', function () {
-        $('.navbar-collapse').removeClass('show');
-    });
+        /**
+         * Close navbar when a link is clicked
+         * @param {Event} event - The click event
+         */
+        $('.navbar-nav a').on('click', function () {
+            $('.navbar-collapse').removeClass('show');
+        });
 
-});
+    });
+}
 
 
 
@@ -42,21 +44,25 @@ document.addEventListener("DOMContentLoaded", function () {
  * Scale effect on hover
  * @param {Event} event - The hover event
  */
-$(".quarter").on("mouseleave",function () {
-    $(this).css("transform", "scale(1.2)");
-}, function () {
-    $(this).css("transform", "scale(1)");
-});
+function addScaleEffectOnHover() {
+    $(".quarter").on("mouseleave", function () {
+        $(this).css("transform", "scale(1.2)");
+    }, function () {
+        $(this).css("transform", "scale(1)");
+    });
+}
 
 /**
- * Smooth scroll to booking section
+ * Smooth scroll to section
  * @param {Event} event - The click event
  */
-$(".smooth-scroll").on('click',function () {
-    $('html, body').animate({
-        scrollTop: $("#booking").offset().top
-    }, 800);
-});
+function smoothScrollToSection() {
+    $(".smooth-scroll").on('click',function () {
+        $('html, body').animate({
+            scrollTop: $("#booking").offset().top
+        }, 800);
+    });
+}
 
 
 
@@ -65,99 +71,91 @@ $(".smooth-scroll").on('click',function () {
  * @param {Event} event - The form submission event
  * @returns {boolean} - Returns false to prevent the default form submission
  */
-document.addEventListener("DOMContentLoaded", function() {
+function submitBookingForm(event) {
+    event.preventDefault();
+    console.log("Form submitted");
+    // Get form values
+    var name = document.getElementById("name").value.trim();
+    var email = document.getElementById("email").value.trim();
+    var eventType = document.getElementById("event-type").value.trim();
+    var date = document.getElementById("date").value;
+    var message = document.getElementById("message").value.trim();
 
-    /**
- * Set the minimum date to the current date
- */
-var currentDate = new Date();
-var day = ("0" + currentDate.getDate()).slice(-2);
-var month = ("0" + (currentDate.getMonth() + 1)).slice(-2);
-var today = currentDate.getFullYear() + "-" + (month) + "-" + (day);
-$('#date').attr('min', today);
+    // Check if all fields are filled
+    if (name === '' || email === '' || date === '' || message === '') {
+        document.getElementById('alert').classList.remove('success');
+        document.getElementById('alert').classList.add('error');
+        document.getElementById('alert').innerHTML = 'Please fill all the required fields.';
+        document.getElementById('alert').style.display = 'block';
+        setTimeout(function () { document.getElementById('alert').style.display = 'none' }, 4000);
+    }
 
-    $("#booking-form").submit(function (event) {
-        event.preventDefault();
-        console.log('Got Here...');
-        // Get form values
-        var name = $("#name").val().trim();
-        var email = $("#email").val().trim();
-        var eventType = $("#event-type").val().trim();
-        var date = $("#date").val();
-        var message = $("#message").val().trim();
+    // Check if the selected date is in the future
+    var currentDate = new Date();
+    var selectedDate = new Date(date + 'T00:00:00'); // Reset time to 00:00:00 to avoid timezone issues
+    if (selectedDate <= currentDate) {
+        document.getElementById('alert').classList.remove('success');
+        document.getElementById('alert').classList.add('error');
+        document.getElementById('alert').innerHTML = 'Please select a future date.';
+        document.getElementById('alert').style.display = 'block';
+        setTimeout(function () { document.getElementById('alert').style.display = 'none' }, 4000);
+    }
 
-        // Check if all fields are filled
-        if (name === '' || email === '' || date === '' || message === '') {
-            $('#alert').removeClass('success').addClass('error').html('Please fill all the required fields.').fadeIn();
-            setTimeout(function () { $('#alert').fadeOut() }, 4000);
-            return false;
-        }
+    // Check if the email address is valid
+    if (!isValidEmail(email)) {
+        document.getElementById('alert').classList.remove('success');
+        document.getElementById('alert').classList.add('error');
+        document.getElementById('alert').innerHTML = 'Please enter a valid email address.';
+        document.getElementById('alert').style.display = 'block';
+        setTimeout(function () { document.getElementById('alert').style.display = 'none' }, 4000);
+    }
 
-        // Check if the selected date is in the future
-        var currentDate = new Date();
-        var selectedDate = new Date(date + 'T00:00:00'); // Reset time to 00:00:00 to avoid timezone issues
-        if (selectedDate <= currentDate) {
-            $('#alert').removeClass('success').addClass('error').html('Please select a future date.').fadeIn();
-            setTimeout(function () { $('#alert').fadeOut() }, 4000);
-            return false;
-        }
+    emailjs.init("user_6Q8cQfYz0v4t6m7t9");
 
-        // Check if the email address is valid
-        if (!isValidEmail(email)) {
-            $('#alert').removeClass('success').addClass('error').html('Please enter a valid email address.').fadeIn();
-            setTimeout(function () { $('#alert').fadeOut() }, 4000);
-            return false;
-        }
+    emailjs.send("service_zeodffs", "template_s6rjjmy", {
+        sendername: "Soundwave Symphony",
+        to: email,
+        subject: "New Booking Request",
+        message: "Thank you for booking a project with us. We appreciate your interest in working with us." +   
+            "\n\nYour details are as follows:\n\n" +
+            "Name: " + name + "\n" +
+            "Email: " + email + "\n" +
+            "Event Type: " + eventType + "\n" +
+            "Date: " + date + "\n" +
+            "Message: " + message + ".\n\n" +
+            "We will get back to you soon."
+    }).then(function (response) {
 
-        emailjs.init("Qur9J272yrutlMj77");
+        $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
+        $("#name").val('');
+        $("#email").val('');
+        $("#event-type").val('');
+        $("#date").val('');
+        $("#message").val('');
+        setTimeout(function () { $('#alert').fadeOut() }, 4000);
+        // Clear the form
+    }, function (error) {
 
-        emailjs.send("service_zeodffs", "template_s6rjjmy", {
-            sendername: "Soundwave Symphony",
-            to: this.email.value,
-            subject: "New Booking Request",
-            message: "Thank you for booking a project with us. We appreciate your interest in working with us." +
-                "\n\nYour details are as follows:\n\n" +
-                "Name: " + name + "\n" +
-                "Email: " + email + "\n" +
-                "Event Type: " + eventType + "\n" +
-                "Date: " + date + "\n" +
-                "Message: " + message + ".\n\n" +
-                "We will get back to you soon."
-        }).then(function (response) {
-
-            $('#alert').removeClass('error').addClass('success').html('Thank you! We will get back to you soon.').fadeIn();
-            $("#name").val('');
-            $("#email").val('');
-            $("#event-type").val('');
-            $("#date").val('');
-            $("#message").val('');
-            setTimeout(function () { $('#alert').fadeOut() }, 4000);
-            // Clear the form
-        }, function (error) {
-
-            $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
-            setTimeout(function () { $('#alert').fadeOut() }, 4000);
-        });
-
-        return false; // Prevent the default form submission
+        $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
+        setTimeout(function () { $('#alert').fadeOut() }, 4000);
     });
+       
+}  
 
-
-});
 
 
 /**
  * Add to cart button click event
  */
-$(($) => {
-    $(document).on("click", ".add-to-cart", function () {
-        // Get the item name relative to the clicked button
-        let itemName = $(this).siblings("h3").text();
-        // Call the showCustomAlert function with the item name
-        showCustomAlert(itemName + " has been added to your cart.");
-        // Additional code to handle adding the item to the cart
-    });
-});
+function addToCart() {   
+    // Get the item name relative to the clicked button
+    let itemName = $(this).siblings("h3").text();
+    // Call the showCustomAlert function with the item name
+    showCustomAlert(itemName + " has been added to your cart.");
+    // Additional code to handle adding the item to the cart
+}
+
+
 /**
  * Show custom alert message
  * @param {string} message - The message to display in the alert
@@ -278,15 +276,8 @@ function isValidEmail(email) {
     return emailRegex.test(email);
 }
 
-// Export functions for Test environment
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        validateMaterializeSelect,
-        isValidEmail
-    };
-}
 
-document.addEventListener("DOMContentLoaded", function () {
+function initializeSidenav() {
     // Initialize sidenav when the document is fully loaded
     $('.sidenav').sidenav({
         closeOnClick: true, // Close the sidenav when clicking on a link
@@ -300,7 +291,25 @@ document.addEventListener("DOMContentLoaded", function () {
         var sidenavInstance = M.Sidenav.getInstance($('#mobile-demo'));
         sidenavInstance.close();
     });
-});
+}
+
+document.addEventListener("DOMContentLoaded", initializeSidenav);
+
+
+// Export functions for Test environment
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        submitBookingForm,
+        validateMaterializeSelect,
+        isValidEmail,
+        initializeSidenav,
+        addToCart,
+        smoothScrollToSection, 
+        addScaleEffectOnHover,
+        smoothScrollingForLinks 
+
+    };
+}
 
 /**
  * Smooth scrolling for links with hashes
