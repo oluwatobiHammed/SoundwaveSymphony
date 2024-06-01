@@ -30,30 +30,6 @@ describe('Smooth scrolling for links with hashes', () => {
   });
 });
 
-describe('Smooth scrolling for navigation links', () => {
-  it('should scroll to the target element when a link with a hash is clicked', () => {
-    // Create a mock element with an offsets
-    const targetElement = document.createElement('div');
-    targetElement.id = 'target';
-    targetElement.style.height = '1000px';
-    document.body.appendChild(targetElement);
-
-    // Create a mock link with a hash
-    const link = document.createElement('a');
-    link.href = '#target';
-    document.body.appendChild(link);
-
-    // Simulate a click event on the link
-    link.click();
-
-    // Assert that the page has scrolled to the target element
-    expect(window.scrollY).toBe(targetElement.offsetTop);
-
-    // Clean up the mock elements
-    document.body.removeChild(targetElement);
-    document.body.removeChild(link);
-  });
-});
 
 
 describe('Close navbar when a link is clicked', () => {
@@ -281,6 +257,26 @@ describe('Sidenav instance', () => {
 
     // Clean up the mock elements
     document.body.removeChild(sidenavElement);
+    document.body.removeChild(link);
+  });
+});
+
+
+describe('Smooth scrolling for links with hashes', () => {
+
+  it('should not scroll when a link without a hash is clicked', () => {
+    // Create a mock link without a hash
+    const link = document.createElement('a');
+    link.href = '#';
+    document.body.appendChild(link);
+
+    // Simulate a click event on the link
+    link.click();
+
+    // Assert that the page has not scrolled
+    expect(window.scrollY).toBe(0);
+
+    // Clean up the mock element
     document.body.removeChild(link);
   });
 });
