@@ -88,6 +88,7 @@ function submitBookingForm(event) {
         document.getElementById('alert').innerHTML = 'Please fill all the required fields.';
         document.getElementById('alert').style.display = 'block';
         setTimeout(function () { document.getElementById('alert').style.display = 'none' }, 4000);
+        return false;
     }
 
     // Check if the selected date is in the future
@@ -99,6 +100,7 @@ function submitBookingForm(event) {
         document.getElementById('alert').innerHTML = 'Please select a future date.';
         document.getElementById('alert').style.display = 'block';
         setTimeout(function () { document.getElementById('alert').style.display = 'none' }, 4000);
+        return false;
     }
 
     // Check if the email address is valid
@@ -108,6 +110,7 @@ function submitBookingForm(event) {
         document.getElementById('alert').innerHTML = 'Please enter a valid email address.';
         document.getElementById('alert').style.display = 'block';
         setTimeout(function () { document.getElementById('alert').style.display = 'none' }, 4000);
+        return false;
     }
 
     emailjs.init("user_6Q8cQfYz0v4t6m7t9");
@@ -138,6 +141,7 @@ function submitBookingForm(event) {
 
         $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
         setTimeout(function () { $('#alert').fadeOut() }, 4000);
+        return false;
     });
        
 }  
@@ -247,8 +251,7 @@ function validateMaterializeSelect() {
                 $(this).children("input").css(classValid).addClass("valid");
             }
         });
-    })
-    $(document).on("click", ".select-wrapper input.select-dropdown", function () {
+    }).on("click", ".select-wrapper input.select-dropdown", function () {
         if ($(this).parent(".select-wrapper").children("ul")
             .children("li.selected:not(.disabled)")
             .css("background-color") === "rgba(0, 0, 0, 0.03)") {
