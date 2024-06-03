@@ -138,7 +138,7 @@ function submitBookingForm(event) {
         setTimeout(function () { $('#alert').fadeOut() }, 4000);
         // Clear the form
     }, function (error) {
-        console.log('FAILED...', error);
+
         $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
         setTimeout(function () { $('#alert').fadeOut() }, 4000);
         return false;
