@@ -73,7 +73,7 @@ function smoothScrollToSection() {
  */
 function submitBookingForm(event) {
     event.preventDefault();
-    console.log("Form submitted");
+
     // Get form values
     var name = document.getElementById("name").value.trim();
     var email = document.getElementById("email").value.trim();
@@ -82,7 +82,7 @@ function submitBookingForm(event) {
     var message = document.getElementById("message").value.trim();
 
     // Check if all fields are filled
-    if (name === '' || email === '' || date === '' || message === '') {
+    if (name === '' || email === '' || date === '' || message === '', eventType === '') {
         document.getElementById('alert').classList.remove('success');
         document.getElementById('alert').classList.add('error');
         document.getElementById('alert').innerHTML = 'Please fill all the required fields.';
@@ -113,7 +113,7 @@ function submitBookingForm(event) {
         return false;
     }
 
-    emailjs.init("user_6Q8cQfYz0v4t6m7t9");
+    emailjs.init("Qur9J272yrutlMj77");
 
     emailjs.send("service_zeodffs", "template_s6rjjmy", {
         sendername: "Soundwave Symphony",
@@ -138,7 +138,7 @@ function submitBookingForm(event) {
         setTimeout(function () { $('#alert').fadeOut() }, 4000);
         // Clear the form
     }, function (error) {
-
+        console.log('FAILED...', error);
         $('#alert').removeClass('success').addClass('error').html('Error: Something went wrong. Please try again.').fadeIn();
         setTimeout(function () { $('#alert').fadeOut() }, 4000);
         return false;
@@ -299,20 +299,7 @@ function initializeSidenav() {
 document.addEventListener("DOMContentLoaded", initializeSidenav);
 
 
-// Export functions for Test environment
-if (typeof module !== 'undefined' && module.exports) {
-    module.exports = {
-        submitBookingForm,
-        validateMaterializeSelect,
-        isValidEmail,
-        initializeSidenav,
-        addToCart,
-        smoothScrollToSection, 
-        addScaleEffectOnHover,
-        smoothScrollingForLinks 
 
-    };
-}
 
 /**
  * Smooth scrolling for links with hashes
@@ -329,3 +316,18 @@ $('a[href*="#"]').on('click', function (event) {
         });
     }
 });
+
+// Export functions for Test environment
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        submitBookingForm,
+        validateMaterializeSelect,
+        isValidEmail,
+        initializeSidenav,
+        addToCart,
+        smoothScrollToSection, 
+        addScaleEffectOnHover,
+        smoothScrollingForLinks 
+
+    };
+}
