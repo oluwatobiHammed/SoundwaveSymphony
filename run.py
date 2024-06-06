@@ -5,18 +5,19 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    user_logged_in = True 
-    return render_template('index.html', is_index_page=user_logged_in)
+    return render_template('index.html', is_index_page=True)
 
 @app.route('/booking')
 def booking():
-    user_logged_in = False 
-    return render_template('form.html', is_index_page=user_logged_in)
+    return render_template('form.html', is_index_page=False)
 
 @app.route('/merchandise')
 def merchandise():
-    user_logged_in = False 
-    return render_template('merchandise.html', is_index_page=user_logged_in)
+    return render_template('merchandise.html', is_index_page=False)
+
+@app.route('/contact')
+def contact():
+    return render_template('contact.html', is_index_page=False)
 
 
 if __name__ == "__main__":

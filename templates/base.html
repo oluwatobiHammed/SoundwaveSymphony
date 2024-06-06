@@ -15,7 +15,13 @@
         type="text/css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
         type="text/css">
-    <link rel="icon" sizes="180x180" href="img/favicon.ico" type="image/x-icon">
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+        type="text/css" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+        rel="stylesheet" type="text/css" />
+    <link rel="icon" sizes="180x180" href="{{ url_for('static', filename='img/favicon.ico') }}" type="image/x-icon">
     <!-- Import Materialize Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
@@ -43,15 +49,15 @@
                     <!-- Navigation links for larger screens -->
                     <ul class="right hide-on-med-and-down">
                         {% if is_index_page %}
-                            <li><a href="#about">About</a></li>
-                            <li><a href="#music">Music</a></li>
-                            <li><a href="#shows">Shows</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#music">Music</a></li>
+                        <li><a href="#shows">Shows</a></li>
                         {% else %}
-                           <li><a href="{{ url_for('index') }}">Home</a></li>
+                        <li><a href="{{ url_for('index') }}">Home</a></li>
                         {% endif %}
                         <li><a href="{{ url_for('merchandise') }}">Merchandise</a></li>
                         <li><a href="{{ url_for('booking') }}">Booking</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="{{ url_for('contact') }}">Contact</a></li>
                     </ul>
                 </div>
             </nav>
@@ -61,12 +67,16 @@
             <li class="sidenav-header">
                 <h4 class="center-align sidenav-title">Soundwave Symphony</h4>
             </li>
-            <li><a class="sidenav-close-link" href="#about">About</a></li>
-            <li><a class="sidenav-close-link" href="#music">Music</a></li>
-            <li><a class="sidenav-close-link" href="#shows">Shows</a></li>
-            <li><a class="sidenav-close-link" href="form.html">Booking</a></li>
-            <li><a class="sidenav-close-link" href="merchandise.html">Merchandise</a></li>
-            <li><a class="sidenav-close-link" href="#contact">Contact</a></li>
+            {% if is_index_page %}
+            <li><a href="#about">About</a></li>
+            <li><a href="#music">Music</a></li>
+            <li><a href="#shows">Shows</a></li>
+            {% else %}
+            <li><a href="{{ url_for('index') }}">Home</a></li>
+            {% endif %}
+            <li><a href="{{ url_for('merchandise') }}">Merchandise</a></li>
+            <li><a href="{{ url_for('booking') }}">Booking</a></li>
+            <li><a href="{{ url_for('contact') }}">Contact</a></li>
         </ul>
     </header>
 
@@ -99,6 +109,8 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    {% block scripts %}
+    {% endblock %}
 
 </body>
 
