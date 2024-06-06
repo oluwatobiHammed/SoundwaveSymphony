@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!-- Meta information -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- External CSS stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
+        type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+        type="text/css">
+    <link rel="icon" sizes="180x180" href="img/favicon.ico" type="image/x-icon">
+    <!-- Import Materialize Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
+
+    {% block styles %}
+    {% endblock %}
+    <!-- Title of the webpage -->
+    <title>Soundwave Symphony</title>
+
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <header>
+        <div class="container">
+            <!-- Title of the website -->
+            <h1 class="header-title">Soundwave Symphony</h1>
+            <!-- Navigation bar -->
+            <nav class="custom-navbar">
+                <div class="nav-wrapper">
+                    <!-- <a href="#" class="brand-logo">Soundwave Symphony</a> -->
+                    <a href="#" data-target="mobile-demo" class="sidenav-trigger right"><i
+                            class="material-icons">menu</i></a>
+                    <!-- Navigation links for larger screens -->
+                    <ul class="right hide-on-med-and-down">
+                        {% if is_index_page %}
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#music">Music</a></li>
+                            <li><a href="#shows">Shows</a></li>
+                        {% else %}
+                           <li><a href="{{ url_for('index') }}">Home</a></li>
+                        {% endif %}
+                        <li><a href="{{ url_for('merchandise') }}">Merchandise</a></li>
+                        <li><a href="{{ url_for('booking') }}">Booking</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <!-- Navigation links for smaller screens -->
+        <ul class="sidenav" id="mobile-demo">
+            <li class="sidenav-header">
+                <h4 class="center-align sidenav-title">Soundwave Symphony</h4>
+            </li>
+            <li><a class="sidenav-close-link" href="#about">About</a></li>
+            <li><a class="sidenav-close-link" href="#music">Music</a></li>
+            <li><a class="sidenav-close-link" href="#shows">Shows</a></li>
+            <li><a class="sidenav-close-link" href="form.html">Booking</a></li>
+            <li><a class="sidenav-close-link" href="merchandise.html">Merchandise</a></li>
+            <li><a class="sidenav-close-link" href="#contact">Contact</a></li>
+        </ul>
+    </header>
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <!-- Contact Footer -->
+    <footer id="contact" class="contact-footer">
+        <div class="container">
+            <!-- Contact information -->
+            <p class="contact-info">Got questions or feedback? Reach out to us at <a
+                    href="mailto:bandemail@example.com">bandemail@example.com</a>. We'd love to hear from you!</p>
+            <p>Stay connected with Soundwave Symphony on social media:</p>
+            <ul class="social-media">
+                <li><a href="https://www.facebook.com/soundwavesymphony" target="_blank" class="social-link"><i
+                            class="fa fa-facebook"></i></a></li>
+                <li><a href="https://twitter.com/soundwavesymphony" target="_blank" class="social-link"><i
+                            class="fa fa-twitter"></i></a></li>
+                <li><a href="https://www.instagram.com/soundwavesymphony" target="_blank" class="social-link"><i
+                            class="fa fa-instagram"></i></a></li>
+                <li><a href="https://www.youtube.com/soundwavesymphony" target="_blank" class="social-link"><i
+                            class="fa fa-youtube"></i></a></li>
+                <li><a href="https://open.spotify.com/artist/soundwavesymphony" target="_blank" class="social-link"><i
+                            class="fa fa-spotify"></i></a></li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

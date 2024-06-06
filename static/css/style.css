@@ -333,8 +333,6 @@ footer p {
 /* Music Section */
 .music-section {
 
-    background-image: url('img/showposter.jpg');
-    /* Add the path to your image */
     background-size: cover;
     /* Cover the entire section */
     background-position: center;
@@ -384,8 +382,6 @@ footer p {
 
 .shows-section {
 
-    background-image: url('img/stageShowposter.jpg');
-    /* Add the path to your image */
     background-size: cover;
     /* Cover the entire section */
     background-position: center;
