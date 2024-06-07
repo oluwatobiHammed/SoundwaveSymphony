@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Kim Deal",
+        "description": "Kim Deal is an American singer, songwriter, and musician. She first rose to prominence as the bassist and co-vocalist for the influential alternative rock band Pixies. Known for her distinctive playing style and voice, Deal's contributions were crucial to the band's sound and success. After leaving Pixies, she formed The Breeders with her twin sister Kelley Deal, where she served as the lead vocalist and rhythm guitarist. The Breeders gained widespread acclaim with their hit album 'Last Splash,' featuring the iconic single 'Cannonball.' Deal's work has been celebrated for its raw energy, inventive bass lines, and the unique blend of punk rock and pop sensibilities.",
+        "image_source": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQdq7wuk5ZFi6oAndvQ5zgqwYv8pVNl3VC83QixI-I8R7Aa0zXk",
+        "url": "kim-deal"
+    },
+    {
+        "name": "Peter Buck",
+        "description": "Peter Buck is an American musician and songwriter, best known as the lead guitarist and co-founder of the alternative rock band R.E.M. His distinctive jangly guitar sound was a defining element of the band's music, contributing to their rise as one of the most important bands in the genre. R.E.M. achieved massive success with albums like 'Murmur,' 'Document,' and 'Automatic for the People.' Buck's innovative guitar work, characterized by arpeggiated chords and melodic riffs, played a crucial role in shaping the band's signature sound. Beyond R.E.M., Buck has been involved in numerous musical projects, showcasing his versatility and enduring influence in the music industry.",
+        "image_source": "https://cdn.mos.cms.futurecdn.net/mprR4xy59cA6dPu4kqCAgN-1200-80.jpg",
+        "url": "peter-buck"
+    },
+    {
+        "name": "D'arcy Wretzky",
+        "description": "D'arcy Wretzky is an American musician and singer, best known as the original bassist for the alternative rock band The Smashing Pumpkins. She played a pivotal role in the band's early success, contributing to their distinctive sound on albums such as 'Gish,' 'Siamese Dream,' and 'Mellon Collie and the Infinite Sadness.' Wretzky's melodic bass lines and stage presence were integral to the band's live performances and recordings. Despite leaving the band in 1999, her impact on The Smashing Pumpkins' music remains significant. Wretzky has since stepped away from the music industry, but her legacy as a foundational member of one of the 1990s' most influential bands endures.",
+        "image_source": "https://pbs.twimg.com/media/GMpqJ7xXsAAEoK5.jpg",
+        "url": "darcy-wretzky"
+    },
+    {
+        "name": "Gary Young",
+        "description": "Gary Young is an American musician and producer, best known as the original drummer for the indie rock band Pavement. He played on the band's early recordings and their critically acclaimed debut album, 'Slanted and Enchanted.' Young's unconventional drumming style and eccentric personality made him a memorable figure in the indie rock scene of the early 1990s. Despite his brief tenure with Pavement, his contributions helped establish the band's lo-fi sound and enduring influence. Young also released solo material and continued to work in music production, leaving a lasting imprint on the indie music landscape.",
+        "image_source": "https://variety.com/wp-content/uploads/2023/08/gary-young-pavement.jpg?w=1000",
+        "url": "gary-young"
+    },
+    {
+        "name": "Krist Novoselic",
+        "description": "Krist Novoselic is an American musician and activist, best known as the bassist and co-founder of the rock band Nirvana. He played on all of the band's albums, including the groundbreaking 'Nevermind,' which brought grunge music into the mainstream and revolutionized the rock scene. Novoselic's powerful and melodic bass lines were a key component of Nirvana's sound, complementing Kurt Cobain's guitar work and vocal delivery. After Nirvana disbanded following Cobain's death, Novoselic continued to explore music and political activism, advocating for electoral reform and other causes. His legacy as a member of one of the most influential bands in rock history is firmly cemented.",
+        "image_source": "https://cdn.mos.cms.futurecdn.net/JNq8HNxXuRdddUL75vGnfi.jpg",
+        "url": "krist-novoselic"
+    },
+    {
+        "name": "Kim Gordon",
+        "description": "Kim Gordon is an American musician, singer, and songwriter, best known as the bassist, guitarist, and vocalist for the alternative rock band Sonic Youth. Throughout her career with Sonic Youth, Gordon helped shape the band's experimental and influential sound, contributing to their status as pioneers of the alternative rock genre. Her work spans a variety of styles, from punk to noise rock, and her stage presence and vocal delivery have been widely acclaimed. Beyond music, Gordon is also a visual artist and actress, further showcasing her multifaceted talents. Her contributions to music and art have made her an enduring icon in the world of alternative culture.",
+        "image_source": "https://photos.bandsintown.com/large/16192615.jpeg",
+        "url": "kim-gordon"
+    }
+]

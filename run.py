@@ -1,3 +1,4 @@
+import json
 import os
 from flask import Flask, render_template
 
@@ -21,8 +22,20 @@ def contact():
 
 @app.route('/about')
 def about():
-    return render_template('about.html', is_index_page=False)
+    data = []
+    with open("data/group.json", "r") as json_data:
+        data = json.load(json_data)
+    return render_template('about.html', is_index_page=False, company=data)
 
+@app.route("/about/<member_name>")
+def about_member(member_name):
+    member = {}
+    with open("data/group.json", "r") as json_data:
+        data = json.load(json_data)
+        for obj in data:
+            if obj["url"] == member_name:
+                member = obj
+    return render_template("member.html", member=member)
 
 if __name__ == "__main__":
     app.run(host=os.getenv('IP', '0.0.0.0'), 

@@ -339,7 +339,6 @@ footer p {
     color: #fff;
     /* Text color */
     padding: 100px 0;
-    /* Adjust padding as needed */
 
 }
 
@@ -483,9 +482,7 @@ footer p {
 .booking-section {
     background-color: #f9f9f9;
     /* Light background color */
-    padding: 50px 0;
-    /* Add padding */
-    padding-top: 150px;
+    padding: 0;
 }
 
 .booking-heading {
@@ -522,9 +519,7 @@ footer p {
 .merchandise-section {
     background-color: #fcf8e3;
     /* Light yellow background color */
-    padding: 50px 0;
-    /* Add padding */
-    padding-top: 150px;
+    padding: 0;
 }
 
 .merchandise-heading {
@@ -912,19 +907,22 @@ footer p {
 .fullscreen-image-container {
     position: relative;
     width: 100vw;
-    min-height: 100vh; /* Ensure it takes at least the full viewport height */
+    min-height: 100vh;
+    /* Ensure it takes at least the full viewport height */
     overflow: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Position content at the bottom */
+    justify-content: flex-end;
+    /* Position content at the bottom */
     text-align: center;
-    
+
 }
 
 .fullscreen-image {
     width: 100%;
     height: 80vh;
-    object-fit: contain; /* Maintain aspect ratio, fit within the container */
+    object-fit: contain;
+    /* Maintain aspect ratio, fit within the container */
     text-align: center;
 }
 
@@ -949,20 +947,26 @@ footer p {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #f9f9f9; /* Set the color to white */
-    z-index: 2; /* Ensure the heading is above the overlay */
+    color: #f9f9f9;
+    /* Set the color to white */
+    z-index: 2;
+    /* Ensure the heading is above the overlay */
     text-align: center;
-    font-size: 6rem; /* Adjust font size as needed */
+    font-size: 6rem;
+    /* Adjust font size as needed */
 }
 
 .contact-subheading {
     position: absolute;
-    color: #f9f9f9; /* Set the color to white */
-    z-index: 2; /* Ensure the heading is above the overlay */
+    color: #f9f9f9;
+    /* Set the color to white */
+    z-index: 2;
+    /* Ensure the heading is above the overlay */
     text-align: center;
     font-weight: lighter;
     font-family: "Open Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-    font-size: 1.8rem; /* Adjust font size as needed */
+    font-size: 1.8rem;
+    /* Adjust font size as needed */
 }
 
 @media screen and (max-width: 1024px) {
@@ -981,6 +985,7 @@ footer p {
     .contact-container {
         height: 120vh;
     }
+
     .contact-heading {
         top: 15%;
     }
@@ -990,6 +995,7 @@ footer p {
     .contact-container {
         height: 90vh;
     }
+
     .contact-heading {
         top: 20%;
     }
@@ -1005,6 +1011,7 @@ footer p {
     .contact-container {
         height: 120vh;
     }
+
     .contact-heading {
         top: 25%;
     }
@@ -1016,5 +1023,31 @@ footer p {
     }
 }
 
+.featurette {
+    padding: 0 30px;
+}
+
+.left-image {
+    margin-left: 20px;
+}
+
+.col-md-5 img {
+    width: 100%;
+}
 
 
+/* Ensure the main content starts below the header */
+header {
+    position: relative;
+    z-index: 1000;
+}
+
+main {
+    margin-top: 0;
+    /* Adjust this value based on the height of your header */
+}
+
+/* Additional styles for the sidenav */
+.sidenav-title {
+    margin-top: 20px;
+}
