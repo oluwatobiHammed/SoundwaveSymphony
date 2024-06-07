@@ -19,6 +19,10 @@ def merchandise():
 def contact():
     return render_template('contact.html', is_index_page=False)
 
+@app.route('/about')
+def about():
+    return render_template('about.html', is_index_page=False)
+
 
 if __name__ == "__main__":
     app.run(host=os.getenv('IP', '0.0.0.0'), 

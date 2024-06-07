@@ -917,6 +917,7 @@ footer p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end; /* Position content at the bottom */
+    text-align: center;
     
 }
 
@@ -924,6 +925,7 @@ footer p {
     width: 100%;
     height: 80vh;
     object-fit: contain; /* Maintain aspect ratio, fit within the container */
+    text-align: center;
 }
 
 .contact-container {
@@ -953,6 +955,15 @@ footer p {
     font-size: 6rem; /* Adjust font size as needed */
 }
 
+.contact-subheading {
+    position: absolute;
+    color: #f9f9f9; /* Set the color to white */
+    z-index: 2; /* Ensure the heading is above the overlay */
+    text-align: center;
+    font-weight: lighter;
+    font-family: "Open Sans", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1.8rem; /* Adjust font size as needed */
+}
 
 @media screen and (max-width: 1024px) {
     .contact-container {
