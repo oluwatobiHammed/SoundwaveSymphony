@@ -6,6 +6,17 @@
     <div class="container">
         <h2 class="booking-heading">Booking</h2> <!-- Heading for Booking section -->
         <div class="booking-content">
+
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+            <ul class="flashes">
+                {% for message in messages %}
+                <li>{{ message }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+            {% endwith %}
+
             <!-- Paragraphs describing booking information -->
             <p>Interested in booking Soundwave Symphony for your next event? We'd love to bring our electrifying
                 energy and dynamic performances to your stage!</p>
@@ -17,7 +28,7 @@
                 that meets your needs.</p>
             <div class="row card-panel grey lighten-5">
                 <!-- Booking Inquiry Form -->
-                <form class="col s12" id="booking-form">
+                <form method="POST" class="col s12" id="booking-form">
                     <div class="row">
                         <div class="input-field col s12">
                             <input type="text" id="name" name="name" class="validate" autocomplete="name" required>
@@ -78,5 +89,7 @@
         </div>
     </div>
 </section>
-
+{% endblock %}
+{% block scripts %}
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 {% endblock %}

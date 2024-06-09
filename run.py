@@ -1,23 +1,35 @@
 import json
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, request, flash
+
+if os.path.exists("env.py"):
+    import env
+
 
 app = Flask(__name__)
+app.secret_key = os.environ.get("SECRET_KEY")
+
 
 @app.route('/')
 def index():
     return render_template('index.html', is_index_page=True)
 
-@app.route('/booking')
+@app.route('/booking', methods=['GET', 'POST'])
 def booking():
-    return render_template('form.html', is_index_page=False)
+    if request.method == "POST":
+        flash("Thanks {}, we have received your booking!".format(
+            request.form.get("name")))
+    return render_template('booking.html', is_index_page=False)
 
 @app.route('/merchandise')
 def merchandise():
     return render_template('merchandise.html', is_index_page=False)
 
-@app.route('/contact')
+@app.route('/contact', methods=['GET', 'POST'])
 def contact():
+    if request.method == "POST":
+      flash("Thanks {}, we have received your message!".format(
+      request.form.get("name")))
     return render_template('contact.html', is_index_page=False)
 
 @app.route('/about')

@@ -97,7 +97,7 @@
                 <p>{{ member.description }}</p>
             </div>
             <div class="col-md-5">
-                <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive">
+                <img src="{{ member.image_source }}" alt="" class="featurette-image image-responsive right-image">
             </div>
         
         {% else %}
@@ -107,7 +107,7 @@
             </div>
             <div class="col-md-7">
                 <h3 class="left-image"><a href="/about/{{ member.url }}">{{ loop.index }}. {{ member.name }}</a></h3>
-                <p>{{ member.description }}</p>
+                <p class="left-image">{{ member.description }}</p>
             </div>
 
         {% endif %}

@@ -338,7 +338,8 @@ footer p {
     /* Center the background image */
     color: #fff;
     /* Text color */
-    padding: 100px 0;
+    padding: 0;
+    padding-bottom: 50px;
 
 }
 
@@ -385,9 +386,9 @@ footer p {
     background-position: center;
     /* Center the background image */
     color: #fff;
-    /* Text color */
-    padding: 100px 0;
+    /* Text color *
     /* Adjust padding as needed */
+    padding-bottom: 50px;
 }
 
 .shows-heading {
@@ -1013,7 +1014,7 @@ footer p {
     }
 
     .contact-heading {
-        top: 25%;
+        top: 20%;
     }
 }
 
@@ -1029,6 +1030,10 @@ footer p {
 
 .left-image {
     margin-left: 20px;
+}
+
+.right-image {
+    margin-left: 10px;
 }
 
 .col-md-5 img {
